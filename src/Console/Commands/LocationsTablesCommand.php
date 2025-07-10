@@ -36,7 +36,7 @@ class LocationsTablesCommand extends Command
     private function fetchData(): void
     {
         $url = 'https://www.correosdemexico.gob.mx/SSLServicios/ConsultaCP/CodigoPostal_Exportar.aspx';
-        $dataFormat = 'txt';
+        $dataFormat = 'xls';
         $zipName = 'locations.zip';
 
         // Petición para obtener los campos ocultos del form
@@ -72,7 +72,26 @@ class LocationsTablesCommand extends Command
 
         Storage::put($zipName, $response->body());
 
-        // Extraer zip
+        $this->info("Archivo $zipName descargado con éxito.");
+        $this->info("Extrayendo datos de $zipName...");
+
+        // Extrae los datos del zip al directorio storage/app/private/
         $zip = new ZipArchive();
+        $zipPath = storage_path("app/private/$zipName");
+        if ($zip->open($zipPath) === TRUE) {
+            $zip->extractTo(storage_path('app/private/'));
+            $zip->close();
+        } else {
+            $this->error("No se pudo abrir el archivo zip $zipName.");
+        }
+
+        $this->info("Datos extraídos exitosamente en ".storage_path('app/private/')."CPdescarga.xls");
+
+        // Borrar zip tras extraer datos.
+        if (file_exists($zipPath)) {
+            unlink($zipPath);
+        }
+
+        $this->info("Archivo $zipName eliminado exitosamente.");
     }
 }
