@@ -15,7 +15,7 @@ enum TipoAsentamientoEnum: int
     case UNIDAD_HABITACIONAL = 9;
     case ZONA_COMERCIAL = 10;
     case RANCHO = 11;
-    case RANCHERÍA = 12;
+    case RANCHERIA = 12;
     case ZONA_INDUSTRIAL = 13;
     case GRANJA = 14;
     case EJIDO = 15;
@@ -46,7 +46,7 @@ enum TipoAsentamientoEnum: int
             static::UNIDAD_HABITACIONAL => 'Unidad habitacional',
             static::ZONA_COMERCIAL => 'Zona comercial',
             static::RANCHO => 'Rancho',
-            static::RANCHERÍA => 'Ranchería',
+            static::RANCHERIA => 'Ranchería',
             static::ZONA_INDUSTRIAL => 'Zona industrial',
             static::GRANJA => 'Granja',
             static::EJIDO => 'Ejido',
