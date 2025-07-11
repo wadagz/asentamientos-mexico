@@ -12,7 +12,7 @@ use Wadagz\AsentamientosMexico\Models\Municipio;
 class MunicipioFactory extends Factory
 {
     /**
-     * @var Municipio
+     * @var class-string<Municipio>
      */
     protected $model = Municipio::class;
 

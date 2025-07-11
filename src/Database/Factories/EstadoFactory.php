@@ -11,7 +11,7 @@ use Wadagz\AsentamientosMexico\Models\Estado;
 class EstadoFactory extends Factory
 {
     /**
-     * @var Estado
+     * @var class-string<Estado>
      */
     protected $model = Estado::class;
 

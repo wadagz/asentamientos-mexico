@@ -2,8 +2,10 @@
 
 namespace Wadagz\AsentamientosMexico\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Wadagz\AsentamientosMexico\Database\Factories\AsentamientoFactory;
 use Wadagz\AsentamientosMexico\Enums\Asentamiento\TipoAsentamientoEnum;
 use Wadagz\AsentamientosMexico\Enums\Asentamiento\TipoZonaEnum;
 
@@ -20,6 +22,9 @@ use Wadagz\AsentamientosMexico\Enums\Asentamiento\TipoZonaEnum;
  */
 class Asentamiento extends Model
 {
+    /** @use HasFactory<\Wadagz\AsentamientosMexico\Database\Factories\AsentamientoFactory> */
+    use HasFactory;
+
     /**
      * @var string
      */
@@ -36,6 +41,16 @@ class Asentamiento extends Model
         'codigo_postal',
         'tipo_zona',
     ];
+
+    /**
+     * Defines the factory to use for the model
+     *
+     * @return AsentamientoFactory
+     */
+    protected static function newFactory(): AsentamientoFactory
+    {
+        return AsentamientoFactory::new();
+    }
 
     /**
      * @return BelongsTo<Municipio, $this>

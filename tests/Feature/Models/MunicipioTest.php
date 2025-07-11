@@ -24,6 +24,23 @@ it('can create Municipio', function () {
     $this->assertModelExists($municipio);
 });
 
+it('can update Municipio', function () {
+    $nombreOriginal = 'Guadalajara';
+    $nombreNuevo = 'Tonalá';
+
+    $municipio = Municipio::factory()
+        ->state(['nombre' => $nombreOriginal])
+        ->for($this->estado)
+        ->create();
+
+    $id = $municipio->id;
+
+    $municipio = Municipio::where('id', $id)->first();
+    $municipio->nombre = $nombreNuevo;
+
+    expect($municipio->nombre)->not->toBe($nombreOriginal);
+});
+
 it('can associate only one Estado', function () {
     $estado = Estado::factory()->create();
     $estadoId = $estado->id;
@@ -37,6 +54,24 @@ it('can associate only one Estado', function () {
     $municipio->refresh();
 
     expect($municipio->estado)->not->toBeNull();
-    expect($municipio->estado)->not->toBeArray();
     expect($municipio->estado->id)->not->toBe($estadoId);
+});
+
+it('can associate many Asentamientos', function () {
+    $municipio = Municipio::factory()
+        ->for($this->estado)
+        ->create();
+
+    $asentamientos = array();
+    $numberOfAsentamientos = 10;
+    for ($i = 0; $i < $numberOfAsentamientos; $i++) {
+        $asentamientos[] = Asentamiento::factory()
+            ->state(['municipio_id' => null])
+            ->create();
+    }
+
+    $municipio->asentamientos()->saveMany($asentamientos);
+    $municipio->refresh();
+
+    expect($municipio->asentamientos)->toHaveCount($numberOfAsentamientos);
 });

@@ -17,7 +17,7 @@ use Wadagz\AsentamientosMexico\Database\Factories\MunicipioFactory;
  */
 class Municipio extends Model
 {
-    /** @use HasFactory<\Wadagz\Database\Factories\MunicipioFactory> */
+    /** @use HasFactory<\Wadagz\AsentamientosMexico\Database\Factories\MunicipioFactory> */
     use HasFactory;
 
     /**

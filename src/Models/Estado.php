@@ -15,7 +15,7 @@ use Wadagz\AsentamientosMexico\Database\Factories\EstadoFactory;
  */
 class Estado extends Model
 {
-    /** @use HasFactory<\Wadagz\Database\Factories\EstadoFactory> */
+    /** @use HasFactory<\Wadagz\AsentamientosMexico\Database\Factories\EstadoFactory> */
     use HasFactory;
 
     /**
