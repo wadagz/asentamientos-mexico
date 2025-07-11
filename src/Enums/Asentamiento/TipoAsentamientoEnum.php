@@ -63,7 +63,7 @@ enum TipoAsentamientoEnum: int
     }
 
     /**
-     * @return array<string>
+     * @return array<int>
      */
     public static function values(): array
     {

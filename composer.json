@@ -29,7 +29,8 @@
     ],
     "require-dev": {
         "pestphp/pest": "^3.8",
-        "orchestra/testbench": "^10.4"
+        "orchestra/testbench": "^10.4",
+        "phpstan/phpstan": "^2.1"
     },
     "config": {
         "allow-plugins": {
