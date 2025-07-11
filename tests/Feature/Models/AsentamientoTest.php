@@ -27,7 +27,7 @@ it('can create Asentamiento', function () {
         'tipo_asentamiento' => TipoAsentamientoEnum::COLONIA,
         'ciudad' => 'Guadalajara',
         'codigo_postal' => '45569',
-        'tipo_zona' => TipoZonaEnum::URBANA,
+        'tipo_zona' => TipoZonaEnum::URBANO,
     ]);
 
     $this->assertModelExists($asentamiento);

@@ -2,32 +2,32 @@
 
 namespace Wadagz\AsentamientosMexico\Enums\Asentamiento;
 
-enum TipoAsentamientoEnum: int
+enum TipoAsentamientoEnum: string
 {
-    case COLONIA = 1;
-    case PUEBLO = 2;
-    case BARRIO = 3;
-    case EQUIPAMIENTO = 4;
-    case CAMPAMENTO = 5;
-    case AEROPUERTO = 6;
-    case FRACCIONAMIENTO = 7;
-    case CONDOMINIO = 8;
-    case UNIDAD_HABITACIONAL = 9;
-    case ZONA_COMERCIAL = 10;
-    case RANCHO = 11;
-    case RANCHERIA = 12;
-    case ZONA_INDUSTRIAL = 13;
-    case GRANJA = 14;
-    case EJIDO = 15;
-    case PARAJE = 16;
-    case HACIENDA = 17;
-    case CONJUNTO_HABITACIONAL = 18;
-    case ZONA_MILITAR = 19;
-    case ZONA_FEDERAL = 20;
-    case PUERTO = 21;
-    case EXHACIENDA = 22;
-    case ZONA_NAVAL = 23;
-    case FINCA = 24;
+    case COLONIA = 'Colonia';
+    case PUEBLO = 'Pueblo';
+    case BARRIO = 'Barrio';
+    case EQUIPAMIENTO = 'Equipamiento';
+    case CAMPAMENTO = 'Campamento';
+    case AEROPUERTO = 'Aeropuerto';
+    case FRACCIONAMIENTO = 'Fraccionamiento';
+    case CONDOMINIO = 'Condominio';
+    case UNIDAD_HABITACIONAL = 'Unidad habitacional';
+    case ZONA_COMERCIAL = 'Zona comercial';
+    case RANCHO = 'Rancho';
+    case RANCHERIA = 'Ranchería';
+    case ZONA_INDUSTRIAL = 'Zona industrial';
+    case GRANJA = 'Granja';
+    case EJIDO = 'Ejido';
+    case PARAJE = 'Paraje';
+    case HACIENDA = 'Hacienda';
+    case CONJUNTO_HABITACIONAL = 'Conjunto habitacional';
+    case ZONA_MILITAR = 'Zona militar';
+    case ZONA_FEDERAL = 'Zona federal';
+    case PUERTO = 'Puerto';
+    case EXHACIENDA = 'Exhacienda';
+    case ZONA_NAVAL = 'Zona naval';
+    case FINCA = 'Finca';
 
     /**
      * @return string

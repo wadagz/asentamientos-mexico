@@ -1,10 +1,10 @@
 <?php
 namespace Wadagz\AsentamientosMexico\Enums\Asentamiento;
 
-enum TipoZonaEnum: int
+enum TipoZonaEnum: string
 {
-    case URBANA = 1;
-    case RURAL  = 2;
+    case URBANO = 'Urbano';
+    case RURAL  = 'Rural';
 
     /**
      * @return string
@@ -12,7 +12,7 @@ enum TipoZonaEnum: int
     public function label(): string
     {
         return match($this) {
-            static::URBANA => 'Urbana',
+            static::URBANO => 'Urbano',
             static::RURAL  => 'Rural',
         };
     }
