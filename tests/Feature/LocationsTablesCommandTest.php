@@ -1,10 +1,9 @@
 <?php
 
-use Wadagz\AsentamientosMexico\Console\Commands\LocationsTablesCommand;
+use Wadagz\AsentamientosMexico\Console\Commands\AsentamientosTablesCommand;
 
 it('can run the command successfully', function () {
-    $this
-        ->artisan(LocationsTablesCommand::class)
+    $this->artisan(AsentamientosTablesCommand::class)
         ->assertSuccessful();
 });
 

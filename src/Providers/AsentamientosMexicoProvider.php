@@ -3,7 +3,7 @@
 namespace Wadagz\AsentamientosMexico\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Wadagz\AsentamientosMexico\Console\Commands\LocationsTablesCommand;
+use Wadagz\AsentamientosMexico\Console\Commands\AsentamientosTablesCommand;
 
 final class AsentamientosMexicoProvider extends ServiceProvider
 {
@@ -29,7 +29,7 @@ final class AsentamientosMexicoProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->commands([
-                LocationsTablesCommand::class,
+                AsentamientosTablesCommand::class,
             ]);
         }
     }

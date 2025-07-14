@@ -5,25 +5,26 @@ namespace Wadagz\AsentamientosMexico\Console\Commands;
 use GuzzleHttp\Cookie\CookieJar;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Process;
 use Illuminate\Support\Facades\Storage;
 use Symfony\Component\DomCrawler\Crawler;
 use ZipArchive;
 
-class LocationsTablesCommand extends Command
+class AsentamientosTablesCommand extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'db:locations-tables-command';
+    protected $signature = 'db:asentamientos-tables-command';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Genera las tablas de Asentamientos, Municipios y Estados.';
 
     /**
      * Execute the console command.
@@ -33,13 +34,19 @@ class LocationsTablesCommand extends Command
     public function handle(): void
     {
         $this->fetchData();
+        $this->preProcessData();
     }
 
+    /**
+     * Descarga el archivo con los datos de la página del gobierno.
+     *
+     * @return void
+     */
     private function fetchData(): void
     {
         $url = 'https://www.correosdemexico.gob.mx/SSLServicios/ConsultaCP/CodigoPostal_Exportar.aspx';
-        $dataFormat = 'xls';
-        $zipName = 'locations.zip';
+        $dataFormat = 'txt';
+        $zipName = 'asentamientos.zip';
 
         // Petición para obtener los campos ocultos del form
         $cookieJar = new CookieJar();
@@ -87,7 +94,7 @@ class LocationsTablesCommand extends Command
             $this->error("No se pudo abrir el archivo zip $zipName.");
         }
 
-        $this->info("Datos extraídos exitosamente en ".storage_path('app/private/')."CPdescarga.xls");
+        $this->info("Datos extraídos exitosamente en ".storage_path('app/private/')."CPdescarga.txt");
 
         // Borrar zip tras extraer datos.
         if (file_exists($zipPath)) {
@@ -95,5 +102,45 @@ class LocationsTablesCommand extends Command
         }
 
         $this->info("Archivo $zipName eliminado exitosamente.");
+    }
+
+    /**
+     * Llama al script de python para pre procesar los datos.
+     *
+     * @return void
+     */
+    private function preProcessData(): void
+    {
+        $scriptPath = __DIR__.'/../../../python/data_preprocessing.py'; // Path del script
+        $dataFilePath = storage_path("app/private/CPdescarga.txt"); // Path del archivo con datos
+        $exportPath = storage_path('temp'); // Path donde exportar los CSV
+        $logsPath = storage_path('logs'); // Path donde guardar los logs
+
+        if (!file_exists($dataFilePath)) {
+            $this->error("El archivo {$scriptPath} no existe.");
+            exit(1);
+        }
+
+        if (!file_exists($exportPath)) {
+            mkdir($exportPath);
+        }
+        if (!file_exists($logsPath)) {
+            mkdir($logsPath);
+        }
+
+        $result = Process::run([
+            'python3',
+            $scriptPath,
+            $dataFilePath,
+            $exportPath,
+            $logsPath,
+
+        ]);
+
+        if ($result->failed()) {
+            $this->error("El pre-procesamiento de datos falló: {$result->errorOutput()}.");
+            dd($result->output(), $result->errorOutput(), $result->exitCode());
+            exit(1);
+        }
     }
 }
