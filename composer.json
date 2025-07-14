@@ -43,5 +43,9 @@
                 "Wadagz\\AsentamientosMexico\\AsentamientosMexicoProvider"
             ]
         }
+    },
+    "scripts": {
+      "test": "vendor/bin/pest",
+      "phpstan": "vendor/bin/phpstan"
     }
 }

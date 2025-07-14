@@ -1,0 +1,21 @@
+services:
+  development:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: "wadagz/asentamientos-mexico"
+    develop:
+      watch:
+        - action: sync
+          path: ./src
+          target: /usr/asentamientos-mexico/src
+        - action: sync
+          path: ./python
+          target: /usr/asentamientos-mexico/python
+        - action: sync
+          path: ./tests
+          target: /usr/asentamientos-mexico/tests
+        - action: rebuild
+          path: composer.json
+    restart: unless-stopped
+    tty: true
