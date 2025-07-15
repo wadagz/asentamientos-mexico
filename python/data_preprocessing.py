@@ -1,6 +1,7 @@
 import pandas as pd
 import sys
 import logging
+import traceback
 
 """
 Funciones para Municipios
@@ -12,14 +13,15 @@ Funciones para Municipios
 def make_municipio_id_unique(row):
   estado_id = row['estado_id']
   municipio_id = row['id']
+  old_id = row['id']
   estado_id = estado_id * 1000
   municipio_id = estado_id + municipio_id
   row['id'] = municipio_id
+  row['old_id'] = old_id
 
   return row
 
 def main():
-    logging.basicConfig(filename=f'{logs_path}/data_preprocessing.log', level=logging.DEBUG)
     logging.info('Iniciado data preprocessing.')
     """
     Carga de DF y renombramiento de columnas
@@ -77,7 +79,13 @@ def main():
     """
     Asentamientos
     """
-    df_asentamientos = df.filter(items=['municipio_id', 'nombre', 'tipo_asentamiento', 'ciudad', 'codigo_postal', 'tipo_zona'])
+    df_asentamientos = df.filter(items=['estado_id', 'municipio_id', 'nombre', 'tipo_asentamiento', 'ciudad', 'codigo_postal', 'tipo_zona'])
+    # Asocia el asentamiento con el id único del municipio
+    df_asentamientos = df_asentamientos.merge(df_municipios, 'inner', left_on=['municipio_id', 'estado_id'], right_on=['old_id', 'estado_id'])
+    # Elimina columnas innecesarias y renombra otras
+    df_asentamientos = df_asentamientos.drop(columns=['estado_id', 'nombre_y', 'old_id', 'municipio_id']).rename(columns={ 'nombre_x': 'nombre', 'id': 'municipio_id' })
+    # Ordena las columnas y filas
+    df_asentamientos = df_asentamientos[['municipio_id', 'nombre', 'tipo_asentamiento', 'ciudad', 'codigo_postal', 'tipo_zona']].sort_values(by='municipio_id')
     logging.debug(f'DF asentamientos generado.')
 
     """
@@ -92,12 +100,16 @@ def main():
     logging.info('Finalizado data preprocessing.')
 
 if __name__ == "__main__":
-    # Toma el tercer argumento como la ruta para guardar los logs
-    logs_path = sys.argv[3]
-    logging.basicConfig(
-       format='%(asctime)s %(levelname)s:%(message)s',
-       level=logging.DEBUG,
-       filename=f'{logs_path}/asentamientos_preprocessing.log',
-       datefmt='%Y-%m-%d %H:%M:%S'
-    )
-    main()
+    try:
+        # Toma el tercer argumento como la ruta para guardar los logs
+        logs_path = sys.argv[3]
+        logging.basicConfig(
+            format='%(asctime)s %(levelname)s:%(message)s',
+            level=logging.DEBUG,
+            filename=f'{logs_path}/asentamientos_preprocessing.log',
+            datefmt='%Y-%m-%d %H:%M:%S'
+        )
+        main()
+    except Exception as e:
+        logging.error(traceback.format_exc())
+        sys.exit(traceback.format_exc())
