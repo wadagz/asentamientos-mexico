@@ -29,12 +29,17 @@ class AsentamientosTablesCommand extends Command
     /**
      * Execute the console command.
      *
-     * @return void
+     * @return int
      */
-    public function handle(): void
+    public function handle(): int
     {
-        $this->fetchData();
-        $this->preProcessData();
+        // $this->fetchData();
+        $result = $this->preProcessData();
+        if ($result !== Command::SUCCESS) {
+            return $result;
+        }
+
+        return 0;
     }
 
     /**
@@ -107,9 +112,9 @@ class AsentamientosTablesCommand extends Command
     /**
      * Llama al script de python para pre procesar los datos.
      *
-     * @return void
+     * @return int
      */
-    private function preProcessData(): void
+    private function preProcessData(): int
     {
         $scriptPath = __DIR__.'/../../../python/data_preprocessing.py'; // Path del script
         $dataFilePath = storage_path("app/private/CPdescarga.txt"); // Path del archivo con datos
@@ -118,7 +123,7 @@ class AsentamientosTablesCommand extends Command
 
         if (!file_exists($dataFilePath)) {
             $this->error("El archivo {$scriptPath} no existe.");
-            exit(1);
+            return 1;
         }
 
         if (!file_exists($exportPath)) {
@@ -139,8 +144,10 @@ class AsentamientosTablesCommand extends Command
 
         if ($result->failed()) {
             $this->error("El pre-procesamiento de datos falló: {$result->errorOutput()}.");
-            dd($result->output(), $result->errorOutput(), $result->exitCode());
-            exit(1);
+            // dd($result->output(), $result->errorOutput(), $result->exitCode());
+            return 2;
         }
+
+        return Command::SUCCESS;
     }
 }
