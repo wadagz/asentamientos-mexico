@@ -9,5 +9,7 @@ it('can run the command successfully', function () {
     expect(storage_path('temp/asentamientos.csv'))->toBeFile();
     expect(storage_path('temp/estados.csv'))->toBeFile();
     expect(storage_path('temp/municipios.csv'))->toBeFile();
+    expect(app_path('Enums/TipoAsentamientoEnum.php'))->toBeFile();
+    expect(app_path('Enums/TipoZonaEnum.php'))->toBeFile();
 });
 

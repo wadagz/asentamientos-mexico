@@ -4,6 +4,7 @@ namespace Wadagz\AsentamientosMexico\Console\Commands;
 
 use GuzzleHttp\Cookie\CookieJar;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Process;
 use Illuminate\Support\Facades\Storage;
@@ -38,6 +39,8 @@ class AsentamientosTablesCommand extends Command
         if ($result !== Command::SUCCESS) {
             return $result;
         }
+        $this->generateEnum('TipoAsentamientoEnum', storage_path('temp/tipo_asentamiento_cases.csv'));
+        $this->generateEnum('TipoZonaEnum', storage_path('temp/tipo_zona_cases.csv'));
 
         return 0;
     }
@@ -147,6 +150,75 @@ class AsentamientosTablesCommand extends Command
             // dd($result->output(), $result->errorOutput(), $result->exitCode());
             return 2;
         }
+
+        return Command::SUCCESS;
+    }
+
+    /**
+     * Obtiene los cases y labels para un enum a partir del archivo generado de cases del mismo.
+     *
+     * @param string $filePath Ruta del archivo a usar.
+     * @return array|int
+     */
+    public function getCases(string $filePath): array|int
+    {
+        $cases = '';
+        $labels = '';
+        if (($handle = fopen($filePath, "r")) !== FALSE) {
+            while (($data = fgetcsv($handle, separator: ",")) !== FALSE) {
+                $cases = $cases."    case $data[0] = '$data[1]';\n";
+                $labels = $labels."            static::$data[0] => '$data[1]',\n";
+            }
+            fclose($handle);
+        } else {
+            $this->error("No se pudo abrir archivo $filePath para generar Enums.");
+            return 4;
+        }
+
+        return [$cases, $labels];
+    }
+
+    /**
+     * Genera los enums de las columnas pertinentes
+     *
+     * @param non-empty-string $name Nombre del Enum.
+     * @param non-empty-string $casesFile Ruta del archivo donde están los cases.
+     * @return int
+     */
+    private function generateEnum(string $name, string $casesFile): int
+    {
+        $namespace = 'Wadagz\\AsentamientosMexico\\Enums';
+        $backingType = 'string';
+        $path = base_path('app/Enums/'.$name.'.php');
+
+        if (File::exists($path)) {
+            $this->info("Enum {$name} ya existe.");
+            return 3;
+        }
+
+        File::ensureDirectoryExists(dirname($path));
+
+        // Comprueba si se retornó un integer o string para corroborar si hubo error o no.
+        $result = $this->getCases($casesFile);
+        if (gettype($result) === 'integer') {
+            return $result;
+        }
+
+        [$cases, $labels] = $result;
+
+        // Obtiene el stub para generar enums.
+        $stub = File::get('src/stubs/enum.backed.stub');
+
+        // Rellena los placeholders.
+        $stub = str_replace(
+            ['{{ namespace }}', '{{ class }}', '{{ backingType }}', '{{ cases }}', '{{ labels }}'],
+            [$namespace, $name, $backingType, $cases, $labels],
+            $stub
+        );
+
+        File::put($path, $stub);
+
+        $this->info("Enum $name creado en $path");
 
         return Command::SUCCESS;
     }

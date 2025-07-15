@@ -89,12 +89,31 @@ def main():
     logging.debug(f'DF asentamientos generado.')
 
     """
+    Enums
+    """
+    # Tipo asentamiento
+    tipo_asentamiento_cases = df.filter(items=['tipo_asentamiento']).drop_duplicates()['tipo_asentamiento']
+    df_tipo_asentamiento = pd.DataFrame({
+        'cases': tipo_asentamiento_cases.apply(lambda case: case.upper().replace(' ', '_')), # Pasa a mayúsculas y reemplaza espacio por guión bajo.
+        'values': tipo_asentamiento_cases
+    })
+
+    # Tipo asentamiento
+    tipo_zona_cases = df.filter(items=['tipo_zona']).drop_duplicates()['tipo_zona']
+    df_tipo_zona = pd.DataFrame({
+        'cases': tipo_zona_cases.apply(lambda case: case.upper().replace(' ', '_')), # Pasa a mayúsculas y reemplaza espacio por guión bajo.
+        'values': tipo_zona_cases
+    })
+
+    """
     Exportacion a archivos CSV
     """
     logging.debug(f'Exportando DF a CSV.')
     df_estados.to_csv(f'{export_path}/estados.csv', index=False)
     df_municipios.to_csv(f'{export_path}/municipios.csv', index=False)
     df_asentamientos.to_csv(f'{export_path}/asentamientos.csv', index=False)
+    df_tipo_asentamiento.to_csv(f'{export_path}/tipo_asentamiento_cases.csv', index=False, header=False)
+    df_tipo_zona.to_csv(f'{export_path}/tipo_zona_cases.csv', index=False, header=False)
     logging.debug(f'CSV exportados.')
 
     logging.info('Finalizado data preprocessing.')
