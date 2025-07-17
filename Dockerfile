@@ -1,10 +1,10 @@
 FROM php:8.2-cli
 
+ARG DEV_USER_ID=1000
+ARG DEV_GROUP_ID=1000
+
 # Establece directorio de trabajo
 WORKDIR /usr/asentamientos-mexico
-
-# Copia todos los archivos al directorio del trabajo
-COPY . /usr/asentamientos-mexico
 
 # Instalación de bibliotecas y paquetes necesarios
 RUN apt-get update && apt-get install -y \
@@ -44,3 +44,12 @@ RUN docker-php-ext-install gd
 
 # Instalar composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+
+RUN groupadd -g ${DEV_GROUP_ID} dev
+RUN useradd -u ${DEV_USER_ID} -ms /bin/bash -g dev dev
+
+# Copia todos los archivos al directorio del trabajo
+COPY --chown=dev:dev . /usr/asentamientos-mexico
+
+USER dev
