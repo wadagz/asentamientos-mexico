@@ -163,7 +163,7 @@ class AsentamientosTablesCommand extends Command
      * Obtiene los cases y labels para un enum a partir del archivo generado de cases del mismo.
      *
      * @param string $filePath Ruta del archivo a usar.
-     * @return array|int
+     * @return array<string>|int
      */
     public function getCases(string $filePath): array|int
     {
@@ -186,8 +186,8 @@ class AsentamientosTablesCommand extends Command
     /**
      * Genera los enums de las columnas pertinentes
      *
-     * @param non-empty-string $name Nombre del Enum.
-     * @param non-empty-string $casesFile Ruta del archivo donde están los cases.
+     * @param string $name Nombre del Enum.
+     * @param string $casesFile Ruta del archivo donde están los cases.
      * @return int
      */
     private function generateEnum(string $name, string $casesFile): int
