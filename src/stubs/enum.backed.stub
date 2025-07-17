@@ -11,7 +11,7 @@ enum {{ class }}: {{ backingType }}
      *
      * @return string
      */
-     public funtion label(): string
+     public function label(): string
      {
         return match($this) {
 {{ labels }}
