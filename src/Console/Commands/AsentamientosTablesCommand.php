@@ -52,6 +52,8 @@ class AsentamientosTablesCommand extends Command
      */
     private function fetchData(): void
     {
+        $this->info('Descargando datos de https://www.correosdemexico.gob.mx');
+
         $url = 'https://www.correosdemexico.gob.mx/SSLServicios/ConsultaCP/CodigoPostal_Exportar.aspx';
         $dataFormat = 'txt';
         $zipName = 'asentamientos.zip';
@@ -102,7 +104,7 @@ class AsentamientosTablesCommand extends Command
             $this->error("No se pudo abrir el archivo zip $zipName.");
         }
 
-        $this->info("Datos extraídos exitosamente en ".storage_path('app/private/')."CPdescarga.txt");
+        $this->info("Datos extraídos exitosamente en ".storage_path('app/private/')."CPdescarga.{$dataFormat}");
 
         // Borrar zip tras extraer datos.
         if (file_exists($zipPath)) {
@@ -119,6 +121,8 @@ class AsentamientosTablesCommand extends Command
      */
     private function preProcessData(): int
     {
+        $this->info('Pre-procesando datos...');
+
         $scriptPath = __DIR__.'/../../../python/data_preprocessing.py'; // Path del script
         $dataFilePath = storage_path("app/private/CPdescarga.txt"); // Path del archivo con datos
         $exportPath = storage_path('temp'); // Path donde exportar los CSV
@@ -151,6 +155,7 @@ class AsentamientosTablesCommand extends Command
             return 2;
         }
 
+        $this->info('Pre-procesado finalizado con éxito.');
         return Command::SUCCESS;
     }
 
@@ -187,7 +192,9 @@ class AsentamientosTablesCommand extends Command
      */
     private function generateEnum(string $name, string $casesFile): int
     {
-        $namespace = 'Wadagz\\AsentamientosMexico\\Enums';
+        $this->info("Generando Enum $name...");
+
+        $namespace = 'App\\Enums';
         $backingType = 'string';
         $path = base_path('app/Enums/'.$name.'.php');
 
