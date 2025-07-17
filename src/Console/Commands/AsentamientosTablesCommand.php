@@ -34,7 +34,7 @@ class AsentamientosTablesCommand extends Command
      */
     public function handle(): int
     {
-        // $this->fetchData();
+        $this->fetchData();
         $result = $this->preProcessData();
         if ($result !== Command::SUCCESS) {
             return $result;
