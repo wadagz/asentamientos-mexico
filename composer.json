@@ -39,7 +39,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Wadagz\\AsentamientosMexico\\AsentamientosMexicoProvider"
+                "Wadagz\\AsentamientosMexico\\Providers\\AsentamientosMexicoProvider"
             ]
         }
     },
