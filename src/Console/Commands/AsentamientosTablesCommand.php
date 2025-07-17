@@ -207,7 +207,7 @@ class AsentamientosTablesCommand extends Command
         [$cases, $labels] = $result;
 
         // Obtiene el stub para generar enums.
-        $stub = File::get('src/stubs/enum.backed.stub');
+        $stub = File::get(__DIR__.'/../../stubs/enum.backed.stub');
 
         // Rellena los placeholders.
         $stub = str_replace(
