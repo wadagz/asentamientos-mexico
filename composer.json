@@ -3,8 +3,7 @@
     "description": "Generación de tablas sobre Estados, Municipios y Asentamientos mediante migraciones en Laravel a partir de los datos abiertos del Gobierno de México.",
     "type": "library",
     "require": {
-        "symfony/dom-crawler": "^7.3",
-        "illuminate/support": "^12.20"
+        "symfony/dom-crawler": "^7.3"
     },
     "license": "MIT",
     "autoload": {
@@ -40,7 +39,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Wadagz\\AsentamientosMexico\\AsentamientosMexicoProvider"
+                "Wadagz\\AsentamientosMexico\\Providers\\AsentamientosMexicoProvider"
             ]
         }
     },
