@@ -1,4 +1,5 @@
 import pandas as pd
+import unicodedata
 import sys
 import logging
 import traceback
@@ -20,6 +21,16 @@ def make_municipio_id_unique(row):
   row['old_id'] = old_id
 
   return row
+
+# Remueve acentos y ñ de textos.
+def remove_accents(text):
+    # Normaliza a NFD (forma descompuesta de unicode)
+    text = unicodedata.normalize('NFD', text)
+    # Filtra los carácteres con acentos
+    text = ''.join(char for char in text if not unicodedata.combining(char))
+    # Reemplaza ñ por n
+    text = text.replace('ñ', 'n').replace('Ñ', 'N')
+    return text
 
 def main():
     logging.info('Iniciado data preprocessing.')
@@ -94,14 +105,14 @@ def main():
     # Tipo asentamiento
     tipo_asentamiento_cases = df.filter(items=['tipo_asentamiento']).drop_duplicates()['tipo_asentamiento']
     df_tipo_asentamiento = pd.DataFrame({
-        'cases': tipo_asentamiento_cases.apply(lambda case: case.upper().replace(' ', '_')), # Pasa a mayúsculas y reemplaza espacio por guión bajo.
+        'cases': tipo_asentamiento_cases.apply(lambda case: remove_accents(case.upper().replace(' ', '_'))), # Pasa a mayúsculas y reemplaza espacio por guión bajo.
         'values': tipo_asentamiento_cases
     })
 
     # Tipo asentamiento
     tipo_zona_cases = df.filter(items=['tipo_zona']).drop_duplicates()['tipo_zona']
     df_tipo_zona = pd.DataFrame({
-        'cases': tipo_zona_cases.apply(lambda case: case.upper().replace(' ', '_')), # Pasa a mayúsculas y reemplaza espacio por guión bajo.
+        'cases': tipo_zona_cases.apply(lambda case: remove_accents(case.upper().replace(' ', '_'))), # Pasa a mayúsculas y reemplaza espacio por guión bajo.
         'values': tipo_zona_cases
     })
 
@@ -122,6 +133,8 @@ if __name__ == "__main__":
     try:
         # Toma el tercer argumento como la ruta para guardar los logs
         logs_path = sys.argv[3]
+
+        # Configuración del logger.
         logging.basicConfig(
             format='%(asctime)s %(levelname)s:%(message)s',
             level=logging.DEBUG,
