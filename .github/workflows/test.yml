@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 jobs:
-  build:
+  test:
 
     runs-on: ubuntu-latest
 
@@ -38,6 +38,9 @@ jobs:
         python-version: '3.13'
         cache: 'pip' # caching pip dependencies
     - run: pip install pandas
+
+    - name: Create empty Unit test directory
+      run: mkdir -p tests/Unit
 
     - name: Run tests
       run: composer test
