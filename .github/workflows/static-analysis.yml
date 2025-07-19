@@ -1,0 +1,27 @@
+name: Static analysis
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Validate composer.json and composer.lock
+      run: composer validate --strict
+
+    - name: Install PHP dependencies
+      run: composer install --prefer-dist --no-progress
+
+    - name: Run static analysis
+      run: composer phpstan

@@ -1,4 +1,4 @@
-name: Test and Static analysis
+name: Test
 
 on:
   push:
@@ -44,6 +44,3 @@ jobs:
 
     - name: Run tests
       run: composer test
-
-    - name: Static analysis
-      run: composer phpstan
