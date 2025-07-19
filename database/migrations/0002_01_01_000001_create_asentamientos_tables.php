@@ -29,10 +29,10 @@ return new class extends Migration
             $table->id();
             $table->foreignId('municipio_id')->nullable()->constrained('municipios')->nullOnDelete();
             $table->string('nombre');
-            $table->enum('tipo_asentamiento', TipoAsentamientoEnum::values());
+            $table->string('tipo_asentamiento');
             $table->string('ciudad')->nullable();
             $table->string('codigo_postal', 5);
-            $table->enum('tipo_zona', TipoZonaEnum::values());
+            $table->string('tipo_zona');
             $table->timestamps();
         });
     }
