@@ -1,0 +1,10 @@
+services:
+  development:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: "wadagz/asentamientos-mexico"
+    volumes:
+      - './:/usr/asentamientos-mexico'
+    restart: unless-stopped
+    tty: true

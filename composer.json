@@ -4,7 +4,6 @@
     "type": "library",
     "require": {
         "symfony/dom-crawler": "^7.3",
-        "illuminate/support": "^12.20",
         "maatwebsite/excel": "^3.1"
     },
     "license": "MIT",
@@ -41,8 +40,12 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Wadagz\\AsentamientosMexico\\AsentamientosMexicoProvider"
+                "Wadagz\\AsentamientosMexico\\Providers\\AsentamientosMexicoProvider"
             ]
         }
+    },
+    "scripts": {
+      "test": "vendor/bin/pest",
+      "phpstan": "vendor/bin/phpstan"
     }
 }
