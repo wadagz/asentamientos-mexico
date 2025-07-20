@@ -3,8 +3,6 @@
 namespace Wadagz\AsentamientosMexico\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Wadagz\AsentamientosMexico\Enums\Asentamiento\TipoAsentamientoEnum;
-use Wadagz\AsentamientosMexico\Enums\Asentamiento\TipoZonaEnum;
 use Wadagz\AsentamientosMexico\Models\Asentamiento;
 use Wadagz\AsentamientosMexico\Models\Municipio;
 
@@ -28,10 +26,10 @@ class AsentamientoFactory extends Factory
         return [
             'municipio_id' => Municipio::factory(),
             'nombre' => fake()->word(),
-            'tipo_asentamiento' => fake()->randomElement(TipoAsentamientoEnum::values()),
+            'tipo_asentamiento' => fake()->word(),
             'ciudad' => fake()->city(),
             'codigo_postal' => fake()->numerify('#####'),
-            'tipo_zona' => fake()->randomElement(TipoZonaEnum::values()),
+            'tipo_zona' => fake()->word(),
         ];
     }
 }

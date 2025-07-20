@@ -6,8 +6,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Wadagz\AsentamientosMexico\Database\Factories\AsentamientoFactory;
-use Wadagz\AsentamientosMexico\Enums\Asentamiento\TipoAsentamientoEnum;
-use Wadagz\AsentamientosMexico\Enums\Asentamiento\TipoZonaEnum;
 
 /**
  * Asentamientos dentro de municipios
@@ -15,10 +13,10 @@ use Wadagz\AsentamientosMexico\Enums\Asentamiento\TipoZonaEnum;
  * @property positive-int $id
  * @property positive-int $municipio_id Id del municipio asociado
  * @property non-empty-string $nombre Nombre del asentamiento
- * @property TipoAsentamientoEnum $tipo_asentamiento Tipo del asentamiento
+ * @property non-empty-string $tipo_asentamiento Tipo del asentamiento
  * @property non-empty-string $ciudad Nombre de la ciudad
  * @property non-empty-string $codigo_postal Código postal del asentamiento
- * @property TipoZonaEnum $tipo_zona Tipo de la zona del asentamiento
+ * @property non-empty-string $tipo_zona Tipo de la zona del asentamiento
  */
 class Asentamiento extends Model
 {
