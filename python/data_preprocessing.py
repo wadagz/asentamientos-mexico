@@ -7,29 +7,23 @@ import traceback
 ###
 # Funciones de utilidad
 ###
-def make_municipio_id_unique(row: pd.Series) -> pd.Series:
+def make_municipio_id_unique(data_frame: pd.DataFrame) -> pd.DataFrame:
     """Convierte el id del municipio en id único
 
     Debido a que los código de municipio son locales al estado, es decir que se
     repiten entre estados, es necesario modificarlos para que sean únicos.
-    El código del estado se multiplica por 1000 y se le suma el código del
-    municipio para crear un código único.
+    Se agrega la columna 'old_id' y se asigna un id autoincremental a la columna 'id'.
 
     Args:
-        row (pd.Series): Fila del municipio a modificar
+        data_frame (pd.DataFrame): DataFrame de municipios
 
     Returns:
-        pd.Series: Fila con nuevo id y old_id
+        pd.DataFrame: DataFrame con nuevo id y old_id
     """
 
-    estado_id = row['estado_id']
-    municipio_id = row['id']
-    old_id = row['id']
-    estado_id = estado_id * 1000
-    municipio_id = estado_id + municipio_id
-    row['id'] = municipio_id
-    row['old_id'] = old_id
-    return row
+    data_frame['old_id'] = data_frame['id']
+    data_frame['id'] = [i + 1 for i in range(len(data_frame['id']))]
+    return data_frame
 
 def remove_accents(text: str) -> str:
     """Remueve acentos y ñ de textos"""
@@ -55,7 +49,7 @@ def process_estados(df: pd.DataFrame) -> pd.DataFrame:
     # Remueve filas duplicadas
     df_estados = df_estados.drop_duplicates()
     # Ordenar por id
-    df_estados.sort_values(by='id')
+    df_estados = df_estados.sort_values(by='id')
     logging.debug(f'DF estados generado.')
     return df_estados
 
@@ -68,10 +62,10 @@ def process_municipios(df: pd.DataFrame) -> pd.DataFrame:
     df_municipios = df_municipios.rename(columns={ 'municipio_id': 'id', 'municipio_nombre': 'nombre'})
     # Elimina filas duplicadas
     df_municipios = df_municipios.drop_duplicates()
+    # Ordenar por estado y por id
+    df_municipios = df_municipios.sort_values(by=['estado_id', 'id'])
     # Aplica función para convertir id a valores únicos
-    df_municipios = df_municipios.apply(make_municipio_id_unique, axis='columns')
-    # Ordena por id
-    df_municipios = df_municipios.sort_values(by='id')
+    df_municipios = make_municipio_id_unique(df_municipios)
     logging.debug(f'DF municipios generado.')
     return df_municipios
 
@@ -88,7 +82,7 @@ def process_asentamientos(df: pd.DataFrame, df_municipios: pd.DataFrame) -> pd.D
     # Elimina columnas innecesarias y renombra otras
     df_asentamientos = df_asentamientos.drop(columns=['estado_id', 'nombre_y', 'old_id', 'municipio_id']).rename(columns={ 'nombre_x': 'nombre', 'id': 'municipio_id' })
     # Ordena las columnas y filas
-    df_asentamientos = df_asentamientos[['municipio_id', 'nombre', 'tipo_asentamiento', 'ciudad', 'codigo_postal', 'tipo_zona']].sort_values(by='municipio_id')
+    df_asentamientos = df_asentamientos[['municipio_id', 'nombre', 'tipo_asentamiento', 'ciudad', 'codigo_postal', 'tipo_zona']].sort_values(by=['municipio_id', 'nombre'])
     logging.debug(f'DF asentamientos generado.')
     return df_asentamientos
 
