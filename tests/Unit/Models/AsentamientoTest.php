@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Wadagz\AsentamientosMexico\Enums\Asentamiento\TipoAsentamientoEnum;
-use Wadagz\AsentamientosMexico\Enums\Asentamiento\TipoZonaEnum;
 use Wadagz\AsentamientosMexico\Models\Asentamiento;
 use Wadagz\AsentamientosMexico\Models\Municipio;
 
@@ -24,10 +22,10 @@ it('can create Asentamiento', function () {
     $asentamiento = Asentamiento::create([
         'municipio_id' => $this->municipio->id,
         'nombre' => 'Americana',
-        'tipo_asentamiento' => TipoAsentamientoEnum::COLONIA,
+        'tipo_asentamiento' => 'Colonia',
         'ciudad' => 'Guadalajara',
         'codigo_postal' => '45569',
-        'tipo_zona' => TipoZonaEnum::URBANO,
+        'tipo_zona' => 'Urbano',
     ]);
 
     $this->assertModelExists($asentamiento);
@@ -36,10 +34,10 @@ it('can create Asentamiento', function () {
 it('can update Asentamiento', function () {
     $datosNuevos = [
         'nombre' => 'Parques del Bosque',
-        'tipo_asentamiento' => (string)TipoAsentamientoEnum::FRACCIONAMIENTO->value,
+        'tipo_asentamiento' => 'Fraccionamiento',
         'ciudad' => 'Tlaquepaque',
         'codigo_postal' => '45610',
-        'tipo_zona' => (string)TipoZonaEnum::RURAL->value,
+        'tipo_zona' => 'Rural',
     ];
 
     $asentamiento = Asentamiento::factory()->create();
