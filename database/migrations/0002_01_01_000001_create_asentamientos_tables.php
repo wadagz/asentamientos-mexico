@@ -3,8 +3,6 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use Wadagz\AsentamientosMexico\Enums\Asentamiento\TipoAsentamientoEnum;
-use Wadagz\AsentamientosMexico\Enums\Asentamiento\TipoZonaEnum;
 
 return new class extends Migration
 {
