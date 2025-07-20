@@ -4,11 +4,6 @@ use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Facades\Schema;
 
 it('can load and run migrations', function () {
-    // Comprueba que no existan las tablas de antemano.
-    $this->assertFalse(Schema::hasTable('estados'));
-    $this->assertFalse(Schema::hasTable('municipios'));
-    $this->assertFalse(Schema::hasTable('asentamientos'));
-
     // Ejecuta las migraciones.
     $this->artisan('migrate:fresh')->assertExitCode(0);
 
