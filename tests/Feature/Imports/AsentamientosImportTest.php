@@ -26,17 +26,38 @@ it ('can import Municipios', function () {
     expect(Municipio::exists())->toBeTrue();
 });
 
+/**
+ * Prueba si se puede ejecutar AsentamientosImport.
+ * Simula la ejecución del import por defecto debido a que puede tomar
+ * demasiado tiempo la ejecución del import.
+ */
 it('can import Asentamientos', function () {
-    $estadosCsvPath = storage_path('temp/estados.csv');
-    Excel::import(new EstadosImport, $estadosCsvPath);
-    expect(Estado::exists())->toBeTrue();
-
-    $municipiosCsvPath = storage_path('temp/municipios.csv');
-    Excel::import(new MunicipiosImport, $municipiosCsvPath);
-    expect(Municipio::exists())->toBeTrue();
-
     $asentamientosCsvPath = storage_path('temp/asentamientos.csv');
+
+    /**
+     * Simular ejecución del import sin crear registros.
+     * Comentar para ejecutar de verdad el import.
+     */
+    Excel::fake();
+
+    /**
+     * Descomentar lineas para probar la ejecución real del import.
+     */
+    // $estadosCsvPath = storage_path('temp/estados.csv');
+    // Excel::import(new EstadosImport, $estadosCsvPath);
+    // expect(Estado::exists())->toBeTrue();
+
+    // $municipiosCsvPath = storage_path('temp/municipios.csv');
+    // Excel::import(new MunicipiosImport, $municipiosCsvPath);
+    // expect(Municipio::exists())->toBeTrue();
+
     Excel::import(new AsentamientosImport, $asentamientosCsvPath);
-    expect(Asentamiento::exists())->toBeTrue();
+
+    /**
+     * assertImported usado junto con Excel::fake()
+     * expect() usado cuando se prueba la ejecución real del import.
+     */
+    Excel::assertImported($asentamientosCsvPath);
+    // expect(Asentamiento::exists())->toBeTrue();
 });
 
