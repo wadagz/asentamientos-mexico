@@ -143,15 +143,16 @@ class AsentamientosTablesCommand extends Command
         $result = Process::run([
             'python3',
             $scriptPath,
+            '--dataFilePath',
             $dataFilePath,
+            '--exportPath',
             $exportPath,
-            $logsPath,
-
+            '--logsPath',
+            $logsPath
         ]);
 
         if ($result->failed()) {
             $this->error("El pre-procesamiento de datos falló: {$result->errorOutput()}.");
-            // dd($result->output(), $result->errorOutput(), $result->exitCode());
             return 2;
         }
 

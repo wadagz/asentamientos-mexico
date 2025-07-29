@@ -1,12 +1,11 @@
 import pandas as pd
 import unicodedata
-import sys
 import logging
-import traceback
+import argparse
 
-###
-# Funciones de utilidad
-###
+#########################
+# Funciones de utilidad #
+#########################
 def make_municipio_id_unique(data_frame: pd.DataFrame) -> pd.DataFrame:
     """Convierte el id del municipio en id único
 
@@ -36,9 +35,9 @@ def remove_accents(text: str) -> str:
     text = text.replace('ñ', 'n').replace('Ñ', 'N')
     return text
 
-###
-# Procesado de datos
-###
+######################
+# Procesado de datos #
+######################
 def process_estados(df: pd.DataFrame) -> pd.DataFrame:
     """Genera dataframe de estados"""
 
@@ -50,7 +49,7 @@ def process_estados(df: pd.DataFrame) -> pd.DataFrame:
     df_estados = df_estados.drop_duplicates()
     # Ordenar por id
     df_estados = df_estados.sort_values(by='id')
-    logging.debug(f'DF estados generado.')
+    logging.debug('DF estados generado.')
     return df_estados
 
 def process_municipios(df: pd.DataFrame) -> pd.DataFrame:
@@ -66,7 +65,7 @@ def process_municipios(df: pd.DataFrame) -> pd.DataFrame:
     df_municipios = df_municipios.sort_values(by=['estado_id', 'id'])
     # Aplica función para convertir id a valores únicos
     df_municipios = make_municipio_id_unique(df_municipios)
-    logging.debug(f'DF municipios generado.')
+    logging.debug('DF municipios generado.')
     return df_municipios
 
 def process_asentamientos(df: pd.DataFrame, df_municipios: pd.DataFrame) -> pd.DataFrame:
@@ -83,12 +82,12 @@ def process_asentamientos(df: pd.DataFrame, df_municipios: pd.DataFrame) -> pd.D
     df_asentamientos = df_asentamientos.drop(columns=['estado_id', 'nombre_y', 'old_id', 'municipio_id']).rename(columns={ 'nombre_x': 'nombre', 'id': 'municipio_id' })
     # Ordena las columnas y filas
     df_asentamientos = df_asentamientos[['municipio_id', 'nombre', 'tipo_asentamiento', 'ciudad', 'codigo_postal', 'tipo_zona']].sort_values(by=['municipio_id', 'nombre'])
-    logging.debug(f'DF asentamientos generado.')
+    logging.debug('DF asentamientos generado.')
     return df_asentamientos
 
-###
-# Generacion de enus
-###
+#######################
+# Generacion de enums #
+#######################
 def get_enum(df: pd.DataFrame, column: str) -> pd.DataFrame:
     """Genera un dataframe con los cases y values para un enum de una columna"""
 
@@ -104,15 +103,10 @@ def main():
     logging.info('Iniciado data preprocessing.')
 
     ### Carga de DF y renombramiento de columnas ###
-    # Toma el primer argumento como la ruta del archivo a cargar.
-    file_path = sys.argv[1]
-    # Tomal el segundo argumento como la ruta para exportar.
-    export_path = sys.argv[2]
+    logging.debug(f'Intentando abrir archivo {args.dataFilePath}')
 
-    logging.debug(f'Intentando abrir archivo {file_path}')
-
-    df = pd.read_csv(file_path, delimiter='|', header=1, encoding='latin_1');
-    logging.debug(f'Renombrando columnas del dataframe.')
+    df = pd.read_csv(args.dataFilePath, delimiter='|', header=1, encoding='latin_1');
+    logging.debug('Renombrando columnas del dataframe.')
     df = df.rename(columns={
         'd_codigo': 'codigo_postal',
         'd_asenta': 'nombre',
@@ -144,28 +138,52 @@ def main():
     df_tipo_zona = get_enum(df, 'tipo_zona')
 
     ### Exportacion a archivos CSV ###
-    logging.debug(f'Exportando DF a CSV.')
-    df_estados.to_csv(f'{export_path}/estados.csv', index=False)
-    df_municipios.to_csv(f'{export_path}/municipios.csv', index=False)
-    df_asentamientos.to_csv(f'{export_path}/asentamientos.csv', index=False)
-    df_tipo_asentamiento.to_csv(f'{export_path}/tipo_asentamiento_cases.csv', index=False, header=False)
-    df_tipo_zona.to_csv(f'{export_path}/tipo_zona_cases.csv', index=False, header=False)
-    logging.debug(f'CSV exportados.')
+    logging.debug('Exportando DF a CSV.')
+    df_estados.to_csv(f'{args.exportPath}/estados.csv', index=False)
+    df_municipios.to_csv(f'{args.exportPath}/municipios.csv', index=False)
+    df_asentamientos.to_csv(f'{args.exportPath}/asentamientos.csv', index=False)
+    df_tipo_asentamiento.to_csv(f'{args.exportPath}/tipo_asentamiento_cases.csv', index=False, header=False)
+    df_tipo_zona.to_csv(f'{args.exportPath}/tipo_zona_cases.csv', index=False, header=False)
+    logging.debug('CSV exportados.')
     logging.info('Finalizado data preprocessing.')
 
 if __name__ == "__main__":
-    try:
-        # Toma el tercer argumento como la ruta para guardar los logs
-        logs_path = sys.argv[3]
+    parser = argparse.ArgumentParser(
+        prog="Preprocesador de datos de asentamientos",
+        description="Preprocesamiento de datos sobre asentamientos de México"
+    )
 
-        # Configuración del logger.
-        logging.basicConfig(
-            format='%(asctime)s %(levelname)s:%(message)s',
-            level=logging.DEBUG,
-            filename=f'{logs_path}/asentamientos_preprocessing.log',
-            datefmt='%Y-%m-%d %H:%M:%S'
-        )
-        main()
-    except Exception as e:
-        logging.error(traceback.format_exc())
-        sys.exit(traceback.format_exc())
+    parser.add_argument(
+        '-d',
+        '--dataFilePath',
+        required=True,
+        type=str,
+        help='Ruta del archivo de donde obtener los datos.'
+    )
+    parser.add_argument(
+        '-e',
+        '--exportPath',
+        required=True,
+        type=str,
+        help='Ruta en donde exportar los archivos CSV generados.'
+    )
+    parser.add_argument(
+        '-l',
+        '--logsPath',
+        required=True,
+        type=str,
+        help='Ruta en donde escribir los logs.'
+    )
+
+    args = parser.parse_args()
+
+    # Configuración del logger.
+    logging.basicConfig(
+        format='%(asctime)s %(levelname)s:%(message)s',
+        level=logging.DEBUG,
+        filename=f'{args.logsPath}/asentamientos_preprocessing.log',
+        datefmt='%Y-%m-%d %H:%M:%S'
+    )
+
+    # Llamada función principal
+    main()
