@@ -9,12 +9,14 @@ seleccionando el paquete.
 ## Estructura de las tablas
 
 ### Estados
+
 |Columna|Tipo        |Ejemplo                      |Notas|
 |-------|------------|-----------------------------|-----|
 |id     |bigInt      |23, 32, 20                   |     |
 |nombre |varchar(255)|Chihuahua, Jalisco, Zacatecas|     |
 
 ### Municipios
+
 |Columna  |Tipo        |Ejemplo                          |Notas|
 |---------|------------|---------------------------------|-----|
 |id       |bigInt      |293, 1403, 190                   |     |
@@ -22,6 +24,7 @@ seleccionando el paquete.
 |nombre   |varchar(255)|Tangancícuaro, Ecuandureo, Zamora|     |
 
 ### Asentamientos
+
 |Columna          |Tipo        |Ejemplo                                                   |Notas                           |
 |-----------------|------------|----------------------------------------------------------|--------------------------------|
 |id               |bigInt      |132434, 98093, 34234                                      |                                |
