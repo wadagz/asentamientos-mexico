@@ -52,7 +52,7 @@ db:asentamientos-tables-command
 ```
 
 Esto descargará el archivo con los datos de la base de datos pública de Correos de México, realizará un preprocesado
-de con Python, y procederá a importarlos mediante la librería `Laravel Excel`.
+de con Python, y procederá a importarlos mediante la librería [Laravel Excel](https://docs.laravel-excel.com/3.1/getting-started/).
 
 > NOTA
 >
@@ -60,11 +60,11 @@ de con Python, y procederá a importarlos mediante la librería `Laravel Excel`.
 
 ### Modelos, Factories y Enums
 
-Se incluyen modelos y factories de `Estado`, `Municipio` y `Asentamiento` para interactuar con las tablas
+Se incluyen [modelos](modelos.md) y [factories](factories.md) de `Estado`, `Municipio` y `Asentamiento` para interactuar con las tablas
 estados, municipios y asentamientos.
 
 Hay dos atributos del modelo `Asentamiento` que cuentan con un conjunto establecido de posibles valores,
-por lo que también se crean enums para dichos atributos.
+por lo que también se crean [enums](enums.md) para dichos atributos.
 
 - `TipoAsentamientoEnum`
 - `TipoZonaEnum`
