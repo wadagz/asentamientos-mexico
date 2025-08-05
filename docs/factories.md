@@ -52,4 +52,4 @@ public function definition(): array
 
 ## Creación con relaciones
 Existen métodos para asociar los registros a crear con registros ya existentes.
-https://laravel.com/docs/12.x/eloquent-factories#factory-relationships
+[https://laravel.com/docs/12.x/eloquent-factories#factory-relationships]
