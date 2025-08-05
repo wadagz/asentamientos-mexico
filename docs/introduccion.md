@@ -23,7 +23,7 @@ el repositorio en el archivo `composer.json`.
 ```json
 {
     "require": {
-        "wadagz/asentamientos-mexico": "dev-master"
+        "wadagz/asentamientos-mexico": "dev-main"
     },
     "repositories": [
         {
