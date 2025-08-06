@@ -71,11 +71,11 @@ de con Python, y procederá a importarlos mediante la librería [Laravel Excel](
 
 ### Modelos, Factories y Enums
 
-Se incluyen [modelos](modelos.md) y [factories](factories.md) de `Estado`, `Municipio` y `Asentamiento` para interactuar con las tablas
+Se incluyen [modelos](explicacion_a_detalle/modelos.html) y [factories](explicacion_a_detalle/factories.html) de `Estado`, `Municipio` y `Asentamiento` para interactuar con las tablas
 estados, municipios y asentamientos.
 
 Hay dos atributos del modelo `Asentamiento` que cuentan con un conjunto establecido de posibles valores,
-por lo que también se crean [enums](enums.md) para dichos atributos.
+por lo que también se crean [enums](explicacion_a_detalle/enums.html) para dichos atributos.
 
 - `TipoAsentamientoEnum`
 - `TipoZonaEnum`
