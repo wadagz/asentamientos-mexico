@@ -1,8 +1,21 @@
+---
+layout: default
+title: Introducción rápida
+nav_order: 2
+---
+
 # Introducción rápida
+{: .no_toc }
 
 _Asentamientos México_ es un paquete diseñado para descargar datos de estados, municipios y asentamientos dentro de
 la república mexicana, disponibles públicamente por parte de Correos de México, y generar tablas junto con sus
 respectivos modelos y factories en un proyecto de Laravel de forma automática.
+
+## TABLA DE CONTENIDOS
+{: .no_toc .text-delta }
+
+- TOC
+{:toc}
 
 ## Instalación
 
@@ -40,8 +53,7 @@ Posteriormente ejecuta `composer install` o `composer update`.
 
 ### Importación de datos
 
-> INFO
->
+{: .info}
 > Previo a hacer uso de los comandos incluidos ejecuta las migraciones `php artisan db:migrate` para que
 > las tablas necesarias sean creadas.
 
@@ -54,8 +66,7 @@ db:asentamientos-tables-command
 Esto descargará el archivo con los datos de la base de datos pública de Correos de México, realizará un preprocesado
 de con Python, y procederá a importarlos mediante la librería [Laravel Excel](https://docs.laravel-excel.com/3.1/getting-started/).
 
-> NOTA
->
+{: .note }
 > Con los parámetros por defecto la importación puede demorar alrededor de 4 minutos.
 
 ### Modelos, Factories y Enums
