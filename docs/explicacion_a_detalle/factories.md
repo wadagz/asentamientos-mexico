@@ -1,3 +1,10 @@
+---
+layout: default
+title: Factories
+parent: Explicación a detalle
+nav_order: 3
+---
+
 # Factories
 
 Cada modelo tiene asociado una factory para facilitar el testing.
@@ -52,4 +59,4 @@ public function definition(): array
 
 ## Creación con relaciones
 Existen métodos para asociar los registros a crear con registros ya existentes.
-[https://laravel.com/docs/12.x/eloquent-factories#factory-relationships]
+<a href="https://laravel.com/docs/12.x/eloquent-factories#factory-relationships">Factory relationships</a>.

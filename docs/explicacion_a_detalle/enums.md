@@ -1,3 +1,10 @@
+---
+layout: default
+title: Enums
+parent: Explicación a detalle
+nav_order: 4
+---
+ 
 # Enums
 
 El modelo `Asentamiento` cuenta con dos propiedades que tienen un conjunto finito

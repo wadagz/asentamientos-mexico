@@ -1,3 +1,9 @@
+---
+layout: default
+title: Tablas / Migraciones
+parent: Explicación a detalle
+nav_order: 1
+---
 # Tablas / Migraciones incluidas
 
 El paquete incluye una migración con tres tablas para almacenar los datos necesarios de estados,
@@ -12,8 +18,8 @@ seleccionando el paquete.
 
 |Columna|Tipo        |Ejemplo                      |Notas|
 |-------|------------|-----------------------------|-----|
-|id     |bigInt      |23, 32, 20                   |     |
-|nombre |varchar(255)|Chihuahua, Jalisco, Zacatecas|     |
+|id     |bigInt      |23, 32, 20                   |-    |
+|nombre |varchar(255)|Chihuahua, Jalisco, Zacatecas|-    |
 
 ### Municipios
 

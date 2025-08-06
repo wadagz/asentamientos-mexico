@@ -1,3 +1,10 @@
+---
+layout: default
+title: Modelos
+parent: Explicación a detalle
+nav_order: 2
+---
+
 # Modelos
 
 Tres modelos son incluidos en el paquete:
