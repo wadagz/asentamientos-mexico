@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Process;
 use Illuminate\Support\Facades\Storage;
 use Symfony\Component\DomCrawler\Crawler;
+use Wadagz\AsentamientosMexico\Services\FetchDataService;
 use ZipArchive;
 
 class AsentamientosTablesCommand extends Command
@@ -32,15 +33,18 @@ class AsentamientosTablesCommand extends Command
      *
      * @return int
      */
-    public function handle(): int
+    public function handle(
+        FetchDataService $fetchDataService
+    ): int
     {
-        $this->fetchData();
-        $result = $this->preProcessData();
-        if ($result !== Command::SUCCESS) {
-            return $result;
-        }
-        $this->generateEnum('TipoAsentamientoEnum', storage_path('temp/tipo_asentamiento_cases.csv'));
-        $this->generateEnum('TipoZonaEnum', storage_path('temp/tipo_zona_cases.csv'));
+        $fetchDataService->handle();
+        // $this->fetchData();
+        // $result = $this->preProcessData();
+        // if ($result !== Command::SUCCESS) {
+        //     return $result;
+        // }
+        // $this->generateEnum('TipoAsentamientoEnum', storage_path('temp/tipo_asentamiento_cases.csv'));
+        // $this->generateEnum('TipoZonaEnum', storage_path('temp/tipo_zona_cases.csv'));
 
         return 0;
     }
