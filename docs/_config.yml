@@ -39,6 +39,9 @@ callouts:
   info:
     title: Info
     color: yellow
+  important:
+    title: Importante
+    color: orange
 
 # Exclude from processing.
 # The following items will not be processed, by default.

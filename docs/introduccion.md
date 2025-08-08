@@ -7,9 +7,7 @@ nav_order: 2
 # Introducción rápida
 {: .no_toc }
 
-_Asentamientos México_ es un paquete diseñado para descargar datos de estados, municipios y asentamientos dentro de
-la república mexicana, disponibles públicamente por parte de Correos de México, y generar tablas junto con sus
-respectivos modelos y factories en un proyecto de Laravel de forma automática.
+Aquí se encuentra los pasos de instalación y una guía básica de uso del paquete.
 
 ## TABLA DE CONTENIDOS
 {: .no_toc .text-delta }
