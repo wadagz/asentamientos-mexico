@@ -1,11 +1,13 @@
-# Ubicaciones en México (Nombre Provisional)
+# Asentamientos México
 
 ## Introducción
 
 Este es un paquete para generación de tablas con información de estados,
-municipios y locaciones en México mediante migraciones en Laravel, todo
-a partir de los datos proporcionados al público general por parte del Gobierno
+municipios y asentamientos en México mediante migraciones en Laravel, todo
+a partir de los datos proporcionados al público general por parte de Correos
 de México.
+
+Aquí se puede consultar la [documentación de uso](https://wadagz.github.io/asentamientos-mexico/).
 
 ## Guía de desarrollo
 
@@ -16,7 +18,12 @@ de México.
 ### Instalación
 Clonar repositorio de github.
 ```bash
-git clone git@github.com:wadagz/asentamientos-mexico.git
+git clone https://github.com/wadagz/asentamientos-mexico.git
+```
+
+Ingresar al directorio creado
+```bash
+cd asentamientos-mexico
 ```
 
 Construir contenedor con docker compose.
@@ -24,36 +31,27 @@ Construir contenedor con docker compose.
 docker compose build
 ```
 
-Ejecutar contenedor con el argumento `--watch` para que se sincronicen los archivos
-dentro del contenedor al hacer cambios a estos.
+Ejecutar contenedor.
 ```bash
-docker compose up --watch
+docker compose up
 ```
 
-Instalar dependencias de composer.
+Instalar dependencias con composer.
 ```bash
 docker exec asentamientos-mexico-development-1 composer install
-```
-
-o dentro del contenedor:
-
-```bash
-docker exec -it asentamientos-mexico-development-1 bash
-composer install
 ```
 
 ### Ejecución de pruebas y análisis estático
 Mediante Pest y PHPStan se realizan las pruebas y análisis estático del código.
 
-Estos compandos pueden ser ejecutados con `docker exec asentamientos-mexico-development-1 <nombre-comando>` o dentro del contenedor mediante
-`docker exec -it asentamientos-mexico-development-1 bash`.
+Estos compandos deben ser ejecutados dentro del contenedor.
 
-Para ejecutar las pruebas.
+- Pruebas.
 ```bash
 composer test
 ```
 
-Para ejecutar el análisis estático.
+- Análisis estático.
 ```bash
 composer phpstan
 ```
