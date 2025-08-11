@@ -105,7 +105,14 @@ def main():
     ### Carga de DF y renombramiento de columnas ###
     logging.debug(f'Intentando abrir archivo {args.dataFilePath}')
 
-    df = pd.read_csv(args.dataFilePath, delimiter='|', header=1, encoding='latin_1');
+    # Intenta abrir el archivo csv con parámetros por defecto.
+    # Si no puede lo abre con otros parámetros.
+    # Usado principalmente para testing.
+    try:
+        df = pd.read_csv(args.dataFilePath)
+    except:
+        df = pd.read_csv(args.dataFilePath, delimiter='|', header=1, encoding='latin_1')
+
     logging.debug('Renombrando columnas del dataframe.')
     df = df.rename(columns={
         'd_codigo': 'codigo_postal',
