@@ -2,67 +2,82 @@
 
 namespace Wadagz\AsentamientosMexico\Services;
 
+use Exception;
 use Illuminate\Support\Facades\File;
 
 class GenerateEnumsService
 {
-    public function handle()
+    /**
+     * @var string 
+     */
+    private $enumName;
+
+    /**
+     * @var string
+     */
+    private $casesFilePath;
+
+    /**
+     * @var string
+     */
+    private $namespace;
+
+    /**
+     * Handle function
+     *
+     * @param string $enumName Nombre del enum a generar.
+     * @param string $namespace Namespace del enum a generar.
+     * @param string $casesFilePath Ruta del archivo con los cases del enum.
+     */
+    public function handle(
+        string $enumName,
+        string $namespace,
+        string $casesFilePath,
+    ): void
     {
-        $this->generateEnum("a", "a.csv");
+        $this->enumName = $enumName;
+        $this->namespace = $namespace;
+        $this->casesFilePath = $casesFilePath;
+
+        $this->generateEnum();
     }
 
     /**
      * Genera los enums de las columnas pertinentes
      *
-     * @param string $name Nombre del Enum.
-     * @param string $casesFile Ruta del archivo donde están los cases.
      * @return int
      */
-    private function generateEnum(string $name, string $casesFile)
+    private function generateEnum()
     {
-        // $this->info("Generando Enum $name...");
-
-        $namespace = 'App\\Enums';
         $backingType = 'string';
-        $path = base_path('app/Enums/'.$name.'.php');
-
-        if (File::exists($path)) {
-            // $this->info("Enum {$name} ya existe.");
-            return 3;
-        }
+        $path = base_path("app/Enums/{$this->namespace}/{$this->enumName}.php");
 
         File::ensureDirectoryExists(dirname($path));
 
-        // Comprueba si se retornó un integer o string para corroborar si hubo error o no.
-        $result = $this->getCases($casesFile);
-        if (gettype($result) === 'integer') {
-            return $result;
+        if (File::exists($path)) {
+            throw new Exception("Enum {$this->namespace}/{$this->enumName} ya existe.");
         }
 
-        [$cases, $labels] = $result;
+        [$cases, $labels] = $this->getCases($this->casesFilePath);
 
         // Obtiene el stub para generar enums.
-        $stub = File::get(__DIR__.'/../../stubs/enum.backed.stub');
+        $stub = File::get(__DIR__.'/../Stubs/enum.backed.stub');
 
         // Rellena los placeholders.
         $stub = str_replace(
             ['{{ namespace }}', '{{ class }}', '{{ backingType }}', '{{ cases }}', '{{ labels }}'],
-            [$namespace, $name, $backingType, $cases, $labels],
+            ["App\\Enums\\".$this->namespace, $this->enumName, $backingType, $cases, $labels],
             $stub
         );
 
         File::put($path, $stub);
-
-        $this->info("Enum $name creado en $path");
-
-        return Command::SUCCESS;
     }
 
     /**
      * Obtiene los cases y labels para un enum a partir del archivo generado de cases del mismo.
      *
      * @param string $filePath Ruta del archivo a usar.
-     * @return array<string>|int
+     * @return array<string>
      */
     private function getCases(string $filePath)
     {
@@ -75,8 +90,7 @@ class GenerateEnumsService
             }
             fclose($handle);
         } else {
-            // $this->error("No se pudo abrir archivo $filePath para generar Enums.");
-            return 4;
+            throw new Exception("No se pudo abrir archivo $filePath para generar Enums.");
         }
 
         return [$cases, $labels];
