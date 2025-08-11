@@ -45,9 +45,9 @@ class GenerateEnumsService
     /**
      * Genera los enums de las columnas pertinentes
      *
-     * @return int
+     * @return void
      */
-    private function generateEnum()
+    private function generateEnum(): void
     {
         $backingType = 'string';
         $path = base_path("app/Enums/{$this->namespace}/{$this->enumName}.php");
@@ -79,7 +79,7 @@ class GenerateEnumsService
      * @param string $filePath Ruta del archivo a usar.
      * @return array<string>
      */
-    private function getCases(string $filePath)
+    private function getCases(string $filePath): array
     {
         $cases = '';
         $labels = '';
