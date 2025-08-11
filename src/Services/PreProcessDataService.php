@@ -53,50 +53,41 @@ class PreProcessDataService
         string|null $logsPath = null,
     ): void
     {
-        $scriptPath = $scriptPath ?? $this->scriptPath;
-        $dataFilePath = $dataFilePath ?? $this->dataFilePath;
-        $exportPath = $exportPath ?? $this->exportPath;
-        $logsPath = $logsPath ?? $this->logsPath;
+        $this->scriptPath = $scriptPath ?? $this->scriptPath;
+        $this->dataFilePath = $dataFilePath ?? $this->dataFilePath;
+        $this->exportPath = $exportPath ?? $this->exportPath;
+        $this->logsPath = $logsPath ?? $this->logsPath;
 
-        $this->preProcessData(
-            $scriptPath,
-            $dataFilePath,
-            $exportPath,
-            $logsPath
-        );
+        $this->preProcessData();
     }
 
     /**
      * Realiza el pre-procesado de datos.
      *
-     * @param non-empty-string $scriptPath Ruta del archivo del script a ejecutar.
-     * @param non-empty-string $dataFilePath Ruta del archivo con datos a procesar.
-     * @param non-empty-string $exportPath Ruta donde escribir los archivos generados.
-     * @param non-empty-string $logsPath Ruta donde escribir los logs.
      * @return void
      */
-    private function preProcessData(string $scriptPath, string $dataFilePath, string $exportPath, string $logsPath): void
+    private function preProcessData(): void
     {
-        if (File::missing($dataFilePath)) {
-            throw new Exception("Archivo $dataFilePath no existente.");
+        if (File::missing($this->dataFilePath)) {
+            throw new Exception("Archivo {$this->dataFilePath} no existente.");
         }
 
-        if (File::missing($exportPath)) {
-            File::makeDirectory($exportPath);
+        if (File::missing($this->exportPath)) {
+            File::makeDirectory($this->exportPath);
         }
-        if (File::missing($logsPath)) {
-            File::makeDirectory($logsPath);
+        if (File::missing($this->logsPath)) {
+            File::makeDirectory($this->logsPath);
         }
 
         $result = Process::run([
             'python3',
-            $scriptPath,
+            $this->scriptPath,
             '--dataFilePath',
-            $dataFilePath,
+            $this->dataFilePath,
             '--exportPath',
-            $exportPath,
+            $this->exportPath,
             '--logsPath',
-            $logsPath
+            $this->logsPath
         ]);
 
         if ($result->failed()) {
