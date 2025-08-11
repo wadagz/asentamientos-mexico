@@ -1,6 +1,5 @@
 <?php
 
-use Wadagz\AsentamientosMexico\Services\FetchDataService;
 use Wadagz\AsentamientosMexico\Services\PreProcessDataService;
 
 it('can pre-process data', function () {
