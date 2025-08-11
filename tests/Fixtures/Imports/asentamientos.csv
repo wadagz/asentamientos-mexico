@@ -1,0 +1,1001 @@
+municipio_id,nombre,tipo_asentamiento,ciudad,codigo_postal,tipo_zona
+1,Misión de Santa Fe,Colonia,Aguascalientes,20266,Urbano
+2,Central de Abastos Viñedos San Marcos,Zona comercial,,20907,Urbano
+2,Lomas de San Isidro,Ranchería,,20957,Rural
+2,Residencial Villa Campestre,Fraccionamiento,,20900,Urbano
+2,Vista Florencia,Condominio,,20997,Rural
+3,Progreso Norte,Colonia,Pabellón de Arteaga,20678,Urbano
+4,La Guadalupana,Granja,San Francisco de los Romo,20303,Rural
+4,San Ángel,Granja,San Francisco de los Romo,20305,Rural
+5,Costa Azul,Colonia,Ensenada,22890,Urbano
+5,Francisco Villa I,Colonia,Ensenada,22850,Urbano
+5,Villa del Mar,Colonia,,22793,Rural
+6,Islas Agrarias A,Colonia,,21600,Urbano
+6,Janitzio 2,Ejido,,21951,Rural
+6,Miguel Hidalgo,Ejido,,21700,Rural
+6,Morelia,Ejido,,21700,Rural
+7,Cañón del Padre,Colonia,Tijuana,22203,Urbano
+7,Emiliano Zapata,Colonia,Tijuana,22170,Urbano
+7,Granjas el Tecolote,Colonia,Tijuana,22644,Urbano
+7,Hacienda las Delicias III,Fraccionamiento,Tijuana,22165,Urbano
+7,Mesa de Otay,Colonia,Tijuana,22430,Urbano
+7,Otay Vista,Fraccionamiento,Tijuana,22450,Urbano
+7,Terrazas del Valle 2da. Sección,Colonia,Tijuana,22330,Urbano
+8,Adolfo López Mateos,Colonia,,22930,Urbano
+9,El Chicharrón,Ranchería,,23834,Rural
+9,Palo Bola,Ranchería,,23736,Rural
+10,El Pescadero,Ranchería,,23354,Rural
+10,Perla del Golfo,Unidad habitacional,La Paz,23088,Urbano
+11,Bella Vista,Fraccionamiento,Cabo San Lucas,23456,Urbano
+12,San Ángel,Ranchería,,23893,Rural
+13,Altamira,Fraccionamiento,San Francisco de Campeche,24085,Urbano
+14,Chun-Ek,Ranchería,,24668,Rural
+15,Bugambilias,Colonia,,24640,Urbano
+16,El Encanto,Ranchería,,24344,Rural
+16,La Tigra,Ranchería,,24346,Rural
+16,Los Cardenales,Rancho,,24342,Rural
+16,Montecristo,Rancho,,24344,Rural
+16,San Pablo,Rancho,,24330,Rural
+17,Venustiano Carranza,Colonia,Ciudad Acuña,26237,Urbano
+18,Jesús Ibarra,Ranchería,,26567,Rural
+19,Privadas los Llanos,Fraccionamiento,,25356,Urbano
+20,San Carlos,Pueblo,,26420,Urbano
+21,El Oro,Ejido,,25847,Rural
+21,La Mota,Ejido,,25855,Rural
+21,San Salvador,Colonia,Monclova,25757,Urbano
+21,Victoriano Cepeda,Colonia,Monclova,25730,Urbano
+22,Paredes,Ranchería,,26510,Rural
+23,Australia,Fraccionamiento,Saltillo,25088,Urbano
+23,Candelarias Residencial,Fraccionamiento,Saltillo,25019,Urbano
+23,San José Residencial,Fraccionamiento,Saltillo,25204,Urbano
+24,California,Colonia,San Buenaventura,25506,Rural
+25,Santa Bárbara,Colonia,Torreón,27270,Urbano
+26,Huerta Beatriz,Ranchería,,26604,Rural
+26,Juan Antonio Martínez,Ranchería,,26605,Rural
+27,La Trinidad,Colonia,,28450,Urbano
+28,El Poblado,Ranchería,,28402,Rural
+29,La Palma,Ranchería,,28555,Rural
+30,Maravillas del Campo,Colonia,Manzanillo,28868,Urbano
+30,Valle Salagua,Fraccionamiento,Manzanillo,28869,Urbano
+31,Villa Izcalli Caxitlán,Colonia,Ciudad de Villa de Álvarez,28979,Urbano
+32,Sagrado Corazón de Jesús,Colonia,,30580,Urbano
+33,El Panteón,Barrio,,30190,Rural
+33,San Juan del Río,Ejido,,30196,Rural
+34,Centenario,Ranchería,,30420,Rural
+34,Córdova,Ranchería,,30417,Rural
+34,El Chiflido,Ranchería,,30420,Rural
+34,El Danubio,Colonia,,30425,Rural
+34,El Hular,Ranchería,,30423,Rural
+34,El Sinaí,Ranchería,,30425,Rural
+34,El Tepeyac,Barrio,,30417,Rural
+34,La Mochita,Ranchería,,30410,Rural
+34,Macuilapa,Ranchería,,30420,Rural
+34,Monserrat,Ranchería,,30427,Rural
+35,Cuchulumtic,Colonia,,29323,Rural
+35,Tzojlum (Tierra Colorada),Ranchería,,29334,Rural
+36,Bajxulum,Colonia,,29873,Rural
+37,Bispuiljá,Colonia,,29942,Rural
+38,Esmeralda,Barrio,,30140,Rural
+39,Francisco I. Madero,Barrio,,30963,Rural
+40,Tzelepat,Ranchería,,29473,Rural
+41,Tres Pinos,Ranchería,,30173,Rural
+42,San José el Pipi,Barrio,Jiquipilas,30430,Rural
+43,Jocolho,Ranchería,,29863,Rural
+44,Concepción Villaflores,Ranchería,,30911,Rural
+45,San Antonio la Victoria,Colonia,,29937,Rural
+46,Guadalupe,Colonia,,29964,Rural
+46,La Reforma de Ocampo,Pueblo,,29966,Rural
+47,Playas,Ranchería,,29533,Rural
+48,Nueva Guadalupe,Colonia,Pijijiapan,30540,Rural
+48,Urbina,Ranchería,,30547,Rural
+49,Emiliano Zapata,Ejido,,29904,Rural
+50,Diego Mazariegos,Colonia,San Cristóbal de las Casas,29218,Urbano
+50,La Hormiga,Colonia,San Cristóbal de las Casas,29215,Urbano
+50,Laureles del Sur,Colonia,San Cristóbal de las Casas,29295,Urbano
+50,Obrera CROM,Colonia,San Cristóbal de las Casas,29243,Urbano
+51,San Miguel,Colonia,,29120,Rural
+52,San Isidro el Llano,Colonia,,29836,Rural
+53,Anexo las Rosas de Guadalupe,Colonia,,30395,Rural
+54,Cantón Montebello,Ranchería,,30808,Rural
+54,Carmen la Joya,Colonia,Tapachula de Córdova y Ordóñez,30783,Urbano
+54,Jubileo 2000,Colonia,Tapachula de Córdova y Ordóñez,30798,Urbano
+54,Quien Sabe,Finca,,30817,Rural
+54,Teófilo Acebo,Colonia,Tapachula de Córdova y Ordóñez,30797,Urbano
+54,Toquian Grande,Ranchería,,30805,Rural
+55,Nueva Jerusalén,Zona federal,,29613,Rural
+56,Chulum Iturbide,Colonia,,29917,Rural
+57,El Manguito,Ranchería,,30511,Rural
+58,Miguel Hidalgo,Pueblo,,30160,Rural
+59,Joljamil,Colonia,,29920,Rural
+60,7 de Abril,Colonia,Tuxtla Gutiérrez,29086,Urbano
+61,San Antonio el Limón Dos,Colonia,,30210,Rural
+62,Embarcadero de Jericó (El Siglo),Pueblo,,30535,Rural
+63,San Juan,Colonia,Villaflores,30478,Urbano
+64,Navenchauc,Pueblo,,29360,Urbano
+65,Loma Bonita,Ranchería,,30990,Rural
+66,El Saucito,Ranchería,,33564,Rural
+66,Rancho Ibarreño (Rancho Ibarra),Ranchería,,33566,Rural
+66,Río Santa Rita,Ranchería,,33576,Rural
+67,Pichiki,Ranchería,,33237,Rural
+68,Instituto Tecnológico de Ciudad Cuauhtémoc,Equipamiento,Cuauhtémoc,31512,Urbano
+68,Quintas las Fuentes,Fraccionamiento,Cuauhtémoc,31512,Urbano
+69,Adición Universidad,Fraccionamiento,Chihuahua,31203,Urbano
+69,Antorcha Popular,Colonia,Chihuahua,31137,Urbano
+69,Bahia de los Ángeles,Fraccionamiento,Chihuahua,31123,Urbano
+69,Bosques de Altea Residencial,Fraccionamiento,Chihuahua,31122,Urbano
+69,Complejo Industrial Chihuahua,Zona industrial,Chihuahua,31136,Urbano
+69,Cordilleras,Fraccionamiento,Chihuahua,31124,Urbano
+69,El Bosque,Colonia,Chihuahua,31066,Urbano
+69,Haciendas del Rejón,Fraccionamiento,Chihuahua,31207,Urbano
+69,Plaza Comercial,Zona comercial,Chihuahua,31207,Urbano
+69,Quintas Quijote,Fraccionamiento,Chihuahua,31136,Urbano
+69,Valle de San Pedro,Fraccionamiento,Chihuahua,31125,Urbano
+70,Las Tunas,Ranchería,,33366,Rural
+71,El Pedregal,Ranchería,,33103,Rural
+71,Los Bustillos,Ranchería,,33105,Rural
+71,Solidaridad,Colonia,Delicias,33016,Urbano
+72,El Terrero,Ranchería,,33275,Rural
+72,Quiroga,Ranchería,,33274,Rural
+72,Santa Isabel Centro,Colonia,,33270,Rural
+73,Balde Negro,Ranchería,,33187,Rural
+73,Boquimoba,Ejido,,33197,Rural
+73,Chipahuitavo,Ranchería,,33196,Rural
+73,El Porvenir,Ranchería,,33187,Rural
+73,La Casita,Ranchería,,33194,Rural
+73,La Laja,Ranchería,,33188,Rural
+73,La Lajita Fracción de Cerro Grande,Ranchería,,33187,Rural
+73,Mesa del Táscate (El Táscate),Ranchería,,33187,Rural
+73,Nararachi (Arroyos Colorados),Ranchería,,33196,Rural
+73,Repogueachi,Ranchería,,33194,Rural
+73,Rojarare,Ranchería,,33196,Rural
+74,El Guamúchil,Ranchería,,33488,Rural
+74,El Pirame (Arroyo de la Onza),Ranchería,,33494,Rural
+74,Huerta de los Carrillo,Ranchería,,33486,Rural
+74,La Chatilla,Ranchería,,33487,Rural
+74,La Laja,Ranchería,,33497,Rural
+74,La Tableta,Ranchería,,33498,Rural
+74,La Zacatosa,Ranchería,,33488,Rural
+75,El Quijote,Fraccionamiento,Hidalgo del Parral,33824,Urbano
+75,Federico Piñón,Colonia,Hidalgo del Parral,33826,Urbano
+75,San Uriel INFONAVIT,Colonia,Hidalgo del Parral,33815,Urbano
+76,El Saucito (El Sauz),Ranchería,,31920,Rural
+76,Guadalupe Victoria,Ejido,,31921,Rural
+77,Acebuches (La Soledad),Ejido,,33970,Rural
+77,Lote Ocho,Ejido,,33970,Rural
+77,Marbella,Ranchería,,33970,Rural
+78,"CEFERESO No. 9 ""Norte""",Equipamiento,,32737,Rural
+78,INFONAVIT Mil Cumbres,Fraccionamiento,Juárez,32600,Urbano
+78,Jasso,Fraccionamiento,Juárez,32354,Urbano
+78,La Moraleja,Fraccionamiento,Juárez,32402,Urbano
+78,Monte de los Viñedos,Fraccionamiento,Juárez,32544,Urbano
+78,Parque Industrial Gema,Zona industrial,Juárez,32648,Urbano
+79,Campo Doscientos Cincuenta y Cuatro (La Esperanza),Colonia,,31978,Rural
+80,La Junta de los Ríos,Ranchería,,33173,Rural
+81,Casa Quemada,Ranchería,,33333,Rural
+81,Huajumar (San Isidro Huajumar),Ranchería,,33324,Rural
+82,Los Plebes,Ranchería,,33123,Rural
+82,Rancho Ramírez,Ranchería,,33123,Rural
+82,Rancho de Carrillo,Ranchería,,33123,Rural
+83,Guillermo Prieto,Colonia,,33586,Urbano
+84,Cuatro Hermanos,Ranchería,,33637,Rural
+85,La Granja,Ranchería,,31983,Rural
+85,Paraje Colorado,Ranchería,,31985,Rural
+86,El Realito de García,Pueblo,,33444,Rural
+87,Santísimo de Arriba,Ranchería,,33307,Rural
+88,San Diego Churubusco,Colonia,Ciudad de México,4120,Urbano
+89,San Jerónimo Aculco,Colonia,Ciudad de México,10400,Urbano
+90,Juventud Unida,Colonia,Ciudad de México,14647,Urbano
+90,Valle Escondido,Colonia,Ciudad de México,14600,Urbano
+91,Del Puente,Barrio,Ciudad de México,16513,Urbano
+91,San Diego,Barrio,Ciudad de México,16080,Urbano
+91,Tierra Nueva,Colonia,Ciudad de México,16050,Urbano
+92,Daniel Garza,Colonia,Ciudad de México,11830,Urbano
+93,El Madroño,Ranchería,,34524,Rural
+93,Pascuas,Ranchería,,34526,Rural
+94,Alexa Plus,Fraccionamiento,Victoria de Durango,34110,Urbano
+94,Fray Diego de La Cadena,Colonia,Victoria de Durango,34216,Urbano
+94,La Forestal,Fraccionamiento,Victoria de Durango,34217,Urbano
+94,Los Membrillos,Rancho,,34323,Rural
+94,Paseo de la Pradera II,Colonia,Victoria de Durango,34143,Urbano
+94,San Isidro,Colonia,Victoria de Durango,34030,Urbano
+95,El Recodo del Río,Ranchería,,35975,Rural
+96,Rinconada del Parque,Fraccionamiento,Gómez Palacio,35079,Urbano
+96,San Alberto,Fraccionamiento,Gómez Palacio,35015,Urbano
+96,Santa Cruz Luján,Ejido,,35119,Rural
+97,La Mesa de Coscomate,Ranchería,,35410,Rural
+98,Seis de Enero,Pueblo,,35182,Rural
+99,Arroyo de Borrados,Ejido,,34978,Rural
+99,Chapotán,Ranchería,,34983,Rural
+99,El Apago,Ranchería,,34974,Rural
+99,El Carrizal,Ranchería,,34996,Rural
+99,La Escondida,Ranchería,,34983,Rural
+99,Mesa de la Cebolleta,Ranchería,,34993,Rural
+99,Pino Real (Chapotán),Ranchería,,34983,Rural
+99,San Gerónimo,Ranchería,,34973,Rural
+100,Potrero de Campa,Pueblo,,35665,Rural
+101,El Bajío,Ranchería,,34963,Rural
+101,Plutarco Elías Calles,Colonia,El Salto,34946,Urbano
+102,El Huizachal,Ranchería,,34697,Rural
+102,La Curva,Ranchería,,34693,Rural
+102,Los Laureles,Ranchería,,34676,Rural
+102,Palos Caídos,Ranchería,,34680,Rural
+103,Altamira,Colonia,Santiago Papasquiaro,34635,Urbano
+103,Tablas Grandes,Ranchería,,34615,Rural
+104,San Juan de Michis,Ejido,,34920,Rural
+105,Las Cuevas de Abajo,Ranchería,,34577,Rural
+105,Las Cupías,Ranchería,,34586,Rural
+105,Norotal,Ranchería,,34574,Rural
+105,Otatillos,Ranchería,,34584,Rural
+105,Quebrada Honda,Ranchería,,34587,Rural
+105,San Antonio,Ranchería,,34574,Rural
+106,El Duraznito,Ranchería,,34555,Rural
+106,El Rincón,Ranchería,,34546,Rural
+106,La Vega del Oso,Pueblo,,34563,Rural
+107,El Pitahayo,Ranchería,,36987,Rural
+107,San Rafael de Horta,Ranchería,,36984,Rural
+108,Arroyo de la Luna,Ranchería,,38760,Rural
+108,San José (Campo Hermoso),Ranchería,,38736,Rural
+109,La Pitahaya,Ranchería,,38186,Rural
+109,Las Maravillas,Colonia,Apaseo el Grande,38166,Urbano
+109,Primavera,Colonia,Apaseo el Grande,38160,Urbano
+110,El Vergel,Fraccionamiento,Celaya,38078,Urbano
+110,La Aurora,Fraccionamiento,Celaya,38079,Urbano
+110,San Antonio,Colonia,Celaya,38010,Urbano
+111,El Capulín de Zaragoza,Ranchería,,36494,Rural
+111,La Cayetana,Colonia,Ciudad Manuel Doblado,36473,Urbano
+111,Presa del Sauz,Colonia,,36486,Rural
+111,Santa Anita,Ranchería,,36484,Rural
+112,Loma Triste,Ranchería,,38213,Rural
+112,San Isidro de San Jerónimo,Colonia,,38207,Rural
+113,El Laurel,Ranchería,,38496,Rural
+113,Galeras,Ranchería,,38493,Rural
+113,Juan Simón del Parque,Fraccionamiento,Cortazar,38374,Urbano
+114,Familia López Gutiérrez,Ranchería,,36969,Rural
+115,San Agustín,Ranchería,,37967,Rural
+116,Las Trojes del Rincón,Ranchería,,37823,Rural
+116,Los Carrillo,Ejido,,37829,Rural
+117,El Mirador,Ranchería,,36268,Rural
+117,La Colmena [Relleno Sanitario],Ranchería,,36265,Rural
+117,Presa de los Santos,Fraccionamiento,Marfil,36253,Urbano
+118,Ex-Hacienda San Miguelito Lote Uno,Rancho,,36554,Rural
+118,Haciendas de Santiago,Fraccionamiento,Irapuato,36557,Urbano
+118,San Luis del Jánamo (El Morado),Ranchería,,36835,Rural
+119,De Santiago,Colonia,León de los Aldama,37327,Urbano
+119,La Loma,Fraccionamiento,,37664,Rural
+119,Lomas de Jerez,Colonia,León de los Aldama,37538,Urbano
+119,Lomas del Campestre,Colonia,León de los Aldama,37150,Urbano
+119,Mirador de Gran Jardín,Colonia,León de los Aldama,37138,Urbano
+119,Parques del Sur V,Colonia,León de los Aldama,37570,Urbano
+119,Paseo de los Naranjos,Fraccionamiento,León de los Aldama,37210,Urbano
+119,Portal la Luz,Fraccionamiento,León de los Aldama,37280,Urbano
+119,Portones del Gran Jardín,Fraccionamiento,León de los Aldama,37138,Urbano
+119,Presidentes de México,Colonia,León de los Aldama,37236,Urbano
+119,San Luis,Condominio,León de los Aldama,37458,Urbano
+119,Valtierra,Conjunto habitacional,León de los Aldama,37260,Urbano
+119,Villa de la Rosa,Colonia,León de los Aldama,37207,Urbano
+120,20 de Noviembre (El Veinte),Ejido,,37634,Rural
+120,Los Charcos,Ranchería,,37641,Rural
+121,El Nacimiento,Colonia,Pénjamo,36906,Urbano
+121,Presa del Colorado,Ranchería,,36920,Rural
+122,San Francisco de Gavia Dos (El Chocho),Ejido,,36216,Rural
+122,San José de Cuba,Ranchería,,36216,Rural
+123,Las Adjuntas,Ranchería,,36886,Rural
+123,Loma de Ancón,Ranchería,,36864,Rural
+123,Parque industrial Salamanca Siglo XXI,Zona industrial,Salamanca,36778,Urbano
+123,San José de Loma de Granados,Ranchería,,36873,Rural
+124,San Buenaventura,Colonia,Salvatierra,38900,Urbano
+125,La Estancia del Cubo,Pueblo,,37604,Rural
+125,La Tapona,Ranchería,,37620,Rural
+126,Del Valle,Colonia,San Francisco del Rincón,36350,Urbano
+127,El Nacimiento,Colonia,,37990,Rural
+127,Los Tildios,Ranchería,,37998,Rural
+128,Ex-Hacienda de Santa Ana (Santa Ana y Lobos),Ranchería,,37917,Rural
+128,Las Vizcaínas,Colonia,,37915,Urbano
+129,San Diego de los Dolores,Ranchería,,38256,Rural
+130,La Pila,Ranchería,,38978,Rural
+131,Guadalupe de Ramales (El Pescuezo),Ejido,,36283,Rural
+131,La Chiva Brava,Ejido,,36285,Rural
+131,Loma del Plan de los Sauces,Ejido,,36274,Rural
+132,Cerrito Blanco,Ranchería,,38795,Rural
+133,La Deseada de Arriba,Colonia,Uriangato,38982,Urbano
+133,La Venadita,Colonia,Uriangato,38983,Urbano
+134,La Arena,Rancho,,38423,Rural
+134,Labradores,Colonia,Valle de Santiago,38405,Urbano
+134,Rancho el Paraíso,Ranchería,,38446,Rural
+134,Valle de Santiago Centro,Colonia,Valle de Santiago,38400,Urbano
+135,Las Veredas,Ranchería,,37925,Rural
+135,Mangas Cuatas,Ranchería,,37927,Rural
+135,Rancho Viejo (Espíritu Santo),Ranchería,,37923,Rural
+136,Corrales,Ranchería,,38964,Rural
+137,Caudillo del Sur,Fraccionamiento,Acapulco de Juárez,39700,Urbano
+137,La Venta,Colonia,Acapulco de Juárez,39713,Urbano
+137,Marroquín,Fraccionamiento,Acapulco de Juárez,39640,Urbano
+137,Playa Guitarrón,Fraccionamiento,Acapulco de Juárez,39880,Urbano
+137,Primero de Mayo,Colonia,Acapulco de Juárez,39720,Urbano
+138,Tsonteconcuicuilco,Ranchería,,41135,Rural
+139,Las Pilitas,Ranchería,,41906,Rural
+139,Rancho Dos Potrillos (Rancho Luis Justo H.),Ranchería,,41910,Rural
+140,Bejucos,Ranchería,,40864,Rural
+140,La Tinajita,Ranchería,,40865,Rural
+140,Tres Palos,Pueblo,,40874,Rural
+141,El Cascalote,Pueblo,,41070,Rural
+141,Tinajas,Colonia,,41077,Rural
+142,La Reforma,Colonia,,41470,Rural
+143,Las Iguanas,Barrio,,40560,Rural
+144,Agua Hernández,Ranchería,,39115,Rural
+144,Atlitenco Oriente,Colonia,Chilpancingo de los Bravo,39025,Urbano
+144,Burócratas,Colonia,Chilpancingo de los Bravo,39090,Urbano
+144,Carrizal de la Vía,Colonia,,39128,Rural
+144,Ignacio Manuel Altamirano,Colonia,Chilpancingo de los Bravo,39015,Urbano
+144,Nicolás Bravo,Colonia,Chilpancingo de los Bravo,39050,Urbano
+144,Universidad,Colonia,Chilpancingo de los Bravo,39074,Urbano
+145,Vista Hermosa,Colonia,,41811,Rural
+146,Familiar,Colonia,Iguala de la Independencia,40024,Urbano
+147,El Balzamar,Ranchería,,39169,Rural
+148,Cerro Grande,Pueblo,,41731,Rural
+149,Tecolotlipa,Ranchería,,40464,Rural
+150,Las Palmas,Colonia,Petatlán,40853,Urbano
+151,Naranjitas,Pueblo,,39263,Rural
+151,Teocuitlapa,Ranchería,,39267,Rural
+152,Las Minas,Pueblo,,39981,Rural
+153,Rancho Nuevo,Ranchería,,39284,Rural
+154,Huitzátaro,Ranchería,,40775,Rural
+155,Vista Hermosa,Colonia,,39212,Rural
+156,El Dadhó,Ranchería,,42394,Rural
+157,El Cuartel,Ranchería,,42379,Rural
+158,Manuel Rodríguez Martínez,Ranchería,,43745,Rural
+159,La Casa Verde,Ranchería,,42285,Rural
+160,Magueyes Verdes,Ranchería,,43523,Rural
+161,Piltepeco,Ranchería,,43056,Rural
+162,El Chamizal,Ranchería,,43424,Rural
+163,Ahuacahíxpa Ixcatlán,Ranchería,,43017,Rural
+163,Chilcoaloya,Ranchería,,43002,Rural
+164,El Calvario,Colonia,Ixmiquilpan,42303,Urbano
+165,San Nicolás,Pueblo,,42210,Urbano
+166,La Mesa Grande (Mesa Grande),Ranchería,,43364,Rural
+167,San Antonio el Llano,Ranchería,,42125,Rural
+168,Mixquiapan,Ranchería,,43570,Rural
+168,Omitlán de Juárez Centro,Pueblo,,43560,Urbano
+169,Arconada,Colonia,Pachuca de Soto,42060,Urbano
+169,CERESO de Pachuca,Equipamiento,Pachuca de Soto,42037,Urbano
+169,Jorge Rojo Lugo,Colonia,Pachuca de Soto,42070,Urbano
+169,Pachuca 88,Fraccionamiento,Pachuca de Soto,42020,Urbano
+169,Renacimiento,Colonia,Pachuca de Soto,42039,Urbano
+170,Ojo de Agua,Ranchería,,42222,Rural
+171,Manuel Ávila Camacho,Colonia,,42182,Urbano
+171,San Francisco,Fraccionamiento,,42186,Urbano
+172,El Dónimo,Ranchería,,43444,Rural
+173,Alfajayucan,Pueblo,,43793,Urbano
+174,La Presa,Pueblo,,42450,Urbano
+174,Morelos Centro,Colonia,,42440,Urbano
+175,La Concepción (El Carrizal),Ranchería,,43490,Rural
+176,Los Coyotes,Ranchería,,43986,Rural
+177,El Chote,Ranchería,,43132,Rural
+178,Ampliación Emiliano Zapata,Colonia,,43810,Urbano
+178,Huicalco,Barrio,Tizayuca,43808,Urbano
+179,Tollan,Unidad habitacional,Tula de Allende,42807,Urbano
+180,Los Pinos,Fraccionamiento,Tulancingo,43612,Urbano
+181,La Camelia,Colonia,,43203,Urbano
+182,Coporo,Barrio,,43834,Urbano
+182,Tepa el chico,Exhacienda,,43831,Rural
+183,Crucero de los Pozos,Ranchería,,45713,Rural
+184,La Esperanza,Ranchería,,47770,Rural
+185,Insurgentes,Colonia,Ciudad Guzmán,49031,Urbano
+185,Residencial la Nogalera,Fraccionamiento,,49113,Rural
+185,Santa Fe,Fraccionamiento,Ciudad Guzmán,49026,Urbano
+185,Santa Rosa,Colonia,Ciudad Guzmán,49079,Urbano
+186,San Pedro,Barrio,Cocula,48500,Urbano
+187,Cocuasco,Ranchería,,46310,Rural
+188,1 de Mayo,Colonia,Guadalajara,44970,Urbano
+189,La Manzanilla,Colonia,,48898,Rural
+190,El Realengo,Fraccionamiento,Jalostotitlán,47128,Urbano
+191,Labor de Montegrande (Labor de los Enriquez),Ranchería,,47533,Rural
+191,Loma de San Antonio,Ranchería,,47539,Rural
+191,Los Alamitos,Ranchería,,47503,Rural
+191,Rancho Santa María,Ranchería,,47513,Rural
+192,Lo de Guevara (La Loma),Colonia,,46476,Urbano
+193,El Tesorero,Rancho,,46083,Rural
+193,La Calabacilla,Rancho,,46055,Rural
+193,Soconita,Ranchería,,46056,Rural
+194,Bosque del Progreso,Colonia,Puerto Vallarta,48290,Rural
+194,El Remance,Colonia,Puerto Vallarta,48389,Urbano
+195,El Plan de los Plátanos,Ranchería,,48836,Rural
+195,La Anona,Ranchería,,48843,Rural
+196,Arroyo Hondo,Ranchería,,49656,Rural
+196,Soyatlán de la Presa (La Presa),Colonia,,49658,Rural
+197,Rancho Mayor,Ranchería,,47218,Rural
+198,Los Conejos,Colonia,Tepatitlán de Morelos,47690,Urbano
+199,Colinas del Roble,Fraccionamiento,Tlajomulco de Zúñiga,45650,Urbano
+200,Paisajes del Tapatío,Colonia,Tlaquepaque,45588,Urbano
+200,Quintero,Colonia,Tlaquepaque,45550,Urbano
+200,Valle de La Misericordia,Colonia,Tlaquepaque,45615,Urbano
+201,El Ahuatan,Colonia,Tonalá,45412,Urbano
+201,Torres Castilla,Condominio,Tonalá,45410,Urbano
+202,El Barro,Ranchería,,45737,Rural
+203,El Centro,Ranchería,,47259,Rural
+204,La Labor de San Ignacio,Ranchería,,47339,Rural
+205,Ecológica Seattle,Colonia,Zapopan,45150,Urbano
+205,Los Robles,Fraccionamiento,,45233,Urbano
+205,Santa Margarita,Colonia,Zapopan,45140,Urbano
+206,Primavera,Colonia,Zapotiltic,49605,Urbano
+207,Cerrito de Buenos Aires,Ranchería,,45452,Rural
+208,La Loma de los Amoles (Loma de San Pedro),Colonia,,47192,Rural
+209,Camino al Salto (Coapexco),Colonia,,56920,Rural
+210,Mayorazgos del Bosque,Fraccionamiento,Ciudad Adolfo López Mateos,52957,Urbano
+210,Peñitas,Colonia,Ciudad Adolfo López Mateos,52920,Urbano
+211,San Martín,Barrio,,55940,Urbano
+212,La Cima,Condominio,Coacalco de Berriozabal,55707,Urbano
+212,Residencial Paraíso I,Condominio,Coacalco de Berriozabal,55700,Urbano
+213,Cuentla,Ranchería,,51714,Rural
+213,Llano Grande,Pueblo,,51730,Rural
+214,El Huerto,Barrio,Cuautitlán,54807,Urbano
+215,Lomas de San Pablo,Barrio,Chalco de Díaz Covarrubias,56620,Urbano
+215,Los Volcanes,Fraccionamiento,Chalco de Díaz Covarrubias,56600,Urbano
+216,San Gabriel,Pueblo,,54386,Rural
+217,Tepetitlán,Pueblo,,56040,Rural
+218,La Florida (Ciudad Azteca),Fraccionamiento,Ecatepec de Morelos,55129,Urbano
+218,La Guadalupana,Fraccionamiento,Ecatepec de Morelos,55060,Urbano
+218,Rancho Jajalpa,Colonia,Ecatepec de Morelos,55050,Urbano
+218,Vivienda del Taxista,Colonia,Ecatepec de Morelos,55050,Urbano
+219,San Pedro la Gloria,Ranchería,,55684,Rural
+220,Paraje Trejo (El Chaparral),Colonia,Huixquilucan de Degollado,52793,Rural
+221,La Cruz,Ranchería,,54570,Rural
+221,Santa Ana Jilotzingo,Pueblo,,54570,Urbano
+222,Flores Magón,Colonia,,50847,Rural
+223,La Unidad Huitzizilapan,Pueblo,,52059,Rural
+223,Santa María Tlalmimilolpan,Pueblo,,52050,Rural
+224,Torresco,Barrio,Melchor Ocampo,54880,Urbano
+225,Rancho San Francisco,Fraccionamiento,Metepec,52176,Urbano
+226,Lomas Verdes 3a Sección,Fraccionamiento,Naucalpan de Juárez,53125,Urbano
+227,Evolución Súper 43,Colonia,Ciudad Nezahualcóyotl,57700,Urbano
+227,Valle de Aragón,Colonia,Ciudad Nezahualcóyotl,57100,Urbano
+228,Ciudad Campestre,Fraccionamiento,Ciudad Nicolás Romero,54435,Urbano
+229,Venta de Cruz,Colonia,,55977,Rural
+230,Ejido la Campana,Colonia,Ocoyoacac,52740,Urbano
+230,La Conchita,Ranchería,,52743,Rural
+230,San Miguel (Posito del Olvido),Barrio,,52743,Urbano
+231,Presa Brockman,Pueblo,,50627,Rural
+232,Las Erres (Club Campestre Teotihuacán),Rancho,,55855,Rural
+233,Nueva Tlalnepantla,Colonia,Tecámac de Felipe Villanueva,55765,Urbano
+234,Cerro del Divisadero,Ranchería,,51425,Rural
+235,Ahuacatitlán Cuarto y Quinto Cuartel,Ranchería,,50413,Rural
+235,San Francisco Solís,Pueblo,,50433,Rural
+236,El Cerro Pelón,Pueblo,,51305,Rural
+237,Rinconada del Valle,Fraccionamiento,,50885,Urbano
+237,San Pedro Arriba 1ra. Sección,Ranchería,,50867,Rural
+238,San Andrés de las Peras,Pueblo,,56086,Rural
+239,Los Dolores (Ex-hacienda los Dolores),Colonia,Tepotzotlán,54640,Urbano
+240,Tercera Manzana de Barrio Morelos,Barrio,,50525,Rural
+241,San Lucas Tepetlacalco,Pueblo,Tlalnepantla de Baz,54055,Urbano
+241,Tabla Honda,Colonia,Tlalnepantla de Baz,54126,Urbano
+242,Rincón Grande,Pueblo,,51590,Rural
+242,San Juan Corral,Pueblo,,51573,Rural
+242,Vuelta del Río,Pueblo,,51565,Rural
+243,La Loma,Colonia,,50265,Urbano
+244,Rinconada San Marcos,Colonia,Tultitlán de Mariano Escobedo,54954,Urbano
+245,La Palma,Ranchería,,51248,Rural
+246,La Sabana de San Jerónimo,Ejido,,51027,Rural
+246,Mesas de San Jerónimo,Barrio,,51007,Rural
+247,Coloxtitlán,Pueblo,,51814,Rural
+248,La Ascensión,Barrio,,51980,Urbano
+249,Los Terreros,Ranchería,,51453,Rural
+250,La Trampa Chica,Pueblo,,50678,Rural
+250,Providencia Ejido el Depósito,Pueblo,,50670,Rural
+250,San Antonio Pueblo Nuevo,Pueblo,,50674,Rural
+251,Las Chinampas,Colonia,,55785,Rural
+252,Arroyo Seco,Ranchería,,60587,Rural
+252,El Añil (Agua Zarca),Ranchería,,60593,Rural
+252,Las Ollas,Ranchería,,60575,Rural
+252,Paso de las Vacas,Ranchería,,60578,Rural
+253,Bejama,Rancho,,60885,Rural
+253,Cerro Prieto,Rancho,,60887,Rural
+253,El Varil,Rancho,,60897,Rural
+254,Cuauhtémoc,Colonia,,61830,Urbano
+254,Pedrisco,Rancho,,61845,Rural
+255,El Encino,Ranchería,,60924,Rural
+256,La Huerta,Colonia,,60501,Urbano
+257,El Pantano,Ranchería,,61935,Rural
+258,Arroyo Seco (Don Goyo González),Rancho,,60806,Rural
+259,El Capulín,Ejido,,61054,Rural
+260,Valle Verde,Fraccionamiento,Cotija de la Paz,59940,Urbano
+261,Salitre de Copala,Ranchería,,60824,Rural
+262,De San Antonio,Barrio,,59440,Urbano
+263,Cuartel de Guerrero,Pueblo,,61015,Rural
+263,El Garabato (La Loma),Ranchería,,61004,Rural
+264,Palos Secos,Rancho,,61247,Rural
+265,El Limoncito,Ranchería,,61874,Rural
+266,Los Fresnos,Fraccionamiento,Jacona de Plancarte,59893,Urbano
+266,Riveras del Celio,Colonia,Jacona de Plancarte,59810,Urbano
+267,Lázaro Cárdenas,Colonia,,58780,Urbano
+268,El Reparo,Rancho,,58495,Rural
+269,El Zapote (Palo Seco),Rancho,,61277,Rural
+270,Ampliación Ignacio Allende,Colonia,Las Guacamayas,60995,Urbano
+270,Ampliación Lucio Cabañas,Colonia,Ciudad Lázaro Cárdenas,60955,Urbano
+270,Aníbal Ponce,Colonia,Las Guacamayas,60994,Urbano
+270,Buenavista,Rancho,,60965,Rural
+270,Ejidal,Colonia,Ciudad Lázaro Cárdenas,60953,Urbano
+270,Insurgentes,Colonia,Las Guacamayas,60993,Urbano
+271,Josefa Ocampo de Mata,Colonia,Morelia,58116,Urbano
+271,La Factoría,Fraccionamiento,Morelia,58116,Urbano
+271,La Rinconada,Colonia,Morelia,58270,Urbano
+271,Las Aves,Colonia,Morelia,58116,Urbano
+271,Loma Dorada,Fraccionamiento,Morelia,58337,Urbano
+271,Nuevo Punhuato,Colonia,Morelia,58258,Urbano
+271,Valladolid,Fraccionamiento,Morelia,58190,Urbano
+272,La Pastoría,Ranchería,,61793,Rural
+273,Los Pinos,Fraccionamiento,,60280,Urbano
+274,Manzana del Tejocote,Ranchería,,61458,Rural
+275,Isla Yunuén,Pueblo,,61616,Rural
+275,Mirador del Paraíso,Fraccionamiento,Pátzcuaro,61606,Urbano
+276,Ejido Potrerillos,Colonia,La Piedad de Cabadas,59310,Urbano
+276,Jardines del Carmen (Peña),Colonia,La Piedad de Cabadas,59389,Urbano
+277,San Antonio,Colonia,,58764,Urbano
+278,Fundación los Reyes 1594,Fraccionamiento,Los Reyes de Salgado,60378,Urbano
+278,San Gabriel II,Fraccionamiento,Los Reyes de Salgado,60364,Urbano
+279,El Cueramo,Ranchería,,61995,Rural
+280,La Escondida,Ranchería,,61668,Rural
+280,Ojo de Agua de Chupio (La Noria),Ranchería,,61674,Rural
+281,Los Fortines,Ranchería,,60485,Rural
+282,Bellavista,Colonia,,61710,Urbano
+283,Los Avillos,Ranchería,,60553,Rural
+284,San Francisco Pichataro,Pueblo,,60297,Urbano
+285,Río Muerto,Colonia,,59980,Urbano
+285,San Miguel,Colonia,,59980,Urbano
+286,San José de Guadalupe,Ejido,,61074,Rural
+287,Santa Clara,Pueblo,,59963,Urbano
+288,Acúmbaro,Ranchería,,61438,Rural
+288,El Salitre,Rancho,,61446,Rural
+288,La Ciénega,Rancho,,61435,Rural
+289,28 de Octubre,Colonia,Uruapan,60010,Urbano
+289,Benito Juárez Sur,Colonia,Uruapan,60040,Urbano
+289,Las Palomas,Colonia,Uruapan,60170,Urbano
+289,Los Llanos (El Rincón),Ranchería,,60203,Rural
+289,Mesa Cristóbal,Ranchería,,60227,Rural
+290,Cumuatillo,Colonia,,59170,Urbano
+291,Lomas de Villamar,Colonia,,59550,Urbano
+292,Progreso,Colonia,,58731,Urbano
+293,Huertas del Cerrito,Fraccionamiento,Zamora de Hidalgo,59617,Urbano
+294,Los Aguacates,Colonia,,59460,Urbano
+295,Los Fresnos,Colonia,Heróica Zitácuaro,61516,Urbano
+296,El Mirador,Colonia,,62646,Rural
+297,Framboyanes,Fraccionamiento,,62846,Rural
+298,Jardines de Tlaltenango,Fraccionamiento,Cuernavaca,62173,Urbano
+298,Las Palmas,Colonia,Cuernavaca,62050,Urbano
+299,Peñón de los Baños,Ranchería,,62978,Rural
+300,Bosques de Bancouver,Condominio,Jiutepec,62566,Urbano
+300,Santa Anita,Fraccionamiento,Jiutepec,62560,Urbano
+301,Mahoma,Ranchería,,62856,Rural
+302,San Mateo Ixtla,Colonia,Puente de Ixtla,62665,Urbano
+303,Contlalco,Ranchería,,62626,Rural
+304,El Malinal,Ranchería,,62800,Rural
+304,San Agustín,Barrio,,62804,Urbano
+305,Las Colonias,Colonia,Acaponeta,63436,Urbano
+306,Amequita,Ranchería,,63900,Rural
+307,La Puerta de la Lima,Ejido,,63723,Rural
+308,Santa María de Picachos,Pueblo,,63485,Rural
+309,San Miguel de Buenavista,Colonia,,63885,Rural
+310,Tepic (Poeta Amado Nervo),Aeropuerto,,63799,Rural
+311,El Sapo,Ranchería,,63549,Rural
+311,El Zapote,Rancho,,63536,Rural
+311,La Cuesta,Ranchería,,63534,Rural
+311,La Mesa de la Pitayera,Ranchería,,63537,Rural
+311,Los Manguitos,Ranchería,,63533,Rural
+312,El Madrigaleño,Ejido,,63751,Rural
+313,Ampliación Tierra y Libertad,Colonia,Tepic,63177,Urbano
+313,Castilla,Fraccionamiento,Tepic,63196,Urbano
+313,El Mirador INFONAVIT,Unidad habitacional,Tepic,63038,Urbano
+314,Bahía de Banderas,Fraccionamiento,,63737,Urbano
+314,Lázaro Cárdenas,Colonia,,63737,Urbano
+315,Parque Industrial Avante Aeropuerto,Zona industrial,Ciudad Apodaca,66643,Urbano
+316,Juan Méndez Castro,Rancho,,67955,Rural
+316,Salitrillo,Rancho,,67944,Rural
+317,Los Mimbres,Ejido,,67858,Rural
+317,Los Nogales,Ranchería,,67856,Rural
+318,Martín González,Colonia,García,66006,Urbano
+319,Conjunto Habitacional Bugambilias,Fraccionamiento,San Pedro Garza García,66226,Urbano
+319,Corporativo Santa Engracia,Zona comercial,San Pedro Garza García,66279,Urbano
+319,Rincón del Campestre,Colonia,San Pedro Garza García,66278,Urbano
+319,Zona Loma Larga Oriente,Colonia,San Pedro Garza García,66266,Urbano
+320,Nexxus Residencial Sector Platino,Fraccionamiento,Ciudad General Escobedo,66055,Urbano
+321,Cerradas de Lindavista,Colonia,Guadalupe,67125,Urbano
+321,Molino del Rey,Colonia,Guadalupe,67194,Urbano
+321,Portal de Xochimilco,Colonia,Guadalupe,67196,Urbano
+321,Roble Santa María,Colonia,Guadalupe,67190,Urbano
+322,Higueras,Granja,,65706,Rural
+323,La Víbora,Ranchería,,67886,Rural
+324,Gloria Mendiola,Colonia,Linares,67715,Urbano
+325,Villas del Faro,Fraccionamiento,,67606,Rural
+326,René Álvarez,Colonia,Monterrey,64215,Urbano
+326,Talleres,Colonia,Monterrey,64480,Urbano
+326,Torres Monarcas,Condominio,Monterrey,64117,Urbano
+327,Emiliano Zapata,Ejido,,65477,Rural
+328,Las Carretas,Hacienda,,65536,Rural
+329,Rincón de los Cedros,Colonia,San Nicolás de los Garza,66435,Urbano
+329,Valle de las Puentes,Colonia,San Nicolás de los Garza,66460,Urbano
+330,Parque Industrial Milimex,Zona industrial,,66390,Rural
+330,Valle de La Sierra,Colonia,Ciudad Santa Catarina,66165,Urbano
+331,Condado de Asturias,Colonia,Santiago,67315,Urbano
+331,El Tejocote,Ranchería,,67337,Rural
+332,Saltillo,Rancho,,68427,Rural
+333,Loma Bonita,Colonia,Ciudad Ixtepec,70110,Urbano
+334,El Calvario,Colonia,Heroica Ciudad de Huajuapan de León,69005,Urbano
+335,Juquilita,Colonia,Juchitán (Juchitán de Zaragoza),70030,Urbano
+336,Nuevo Progreso,Colonia,,70312,Rural
+337,El Rosario Parte Baja,Barrio,Oaxaca de Juárez,68153,Urbano
+337,Ex-Marquezado,Barrio,Oaxaca de Juárez,68034,Urbano
+337,"Manzana 47 y 48 ""A""",Colonia,,68274,Urbano
+337,Surcos Largos,Colonia,Oaxaca de Juárez,68120,Urbano
+338,Iberia,Ranchería,,70963,Rural
+338,Santa Rosa,Ranchería,,70964,Rural
+339,Playa Brasil,Colonia,,70703,Rural
+340,Portillo Luciérnaga,Ranchería,,70923,Rural
+341,La Casica,Ranchería,,71175,Rural
+342,Guadalupe Victoria,Ranchería,,70517,Rural
+343,Agua de Tierra (Sección la Montaña),Colonia,,68462,Rural
+344,Tierra Colorada,Colonia,,68260,Urbano
+345,Alhelíes,Fraccionamiento,,68285,Urbano
+346,Cerro Clarín,Pueblo,,68407,Rural
+347,Agua Fría Papaloapan,Colonia,,68440,Rural
+347,Los Mangales (La Estopa),Colonia,,68443,Rural
+348,Sabinillo,Pueblo,,69809,Rural
+349,Ingeniero Raúl Sandoval Landázuri,Colonia,,68433,Rural
+349,Piedra de Amolar,Pueblo,,68430,Rural
+350,San Miguel Tulancingo,Pueblo,,69370,Rural
+351,La Cantera de la Primera Sección,Barrio,San Pablo Huitzo,68220,Urbano
+352,El Punto,Ranchería,,68776,Rural
+353,Monte Horeb,Ranchería,,68512,Rural
+354,Cruz Chiquita,Ranchería,,69717,Rural
+355,Cuajinicuil,Ranchería,,71397,Rural
+356,Santa Catarina,Barrio,,71960,Urbano
+357,San Isidro,Colonia,Teotitlán de Flores Magón,68540,Rural
+358,Tlacotepec,Pueblo,,73337,Rural
+359,San Antonio Mihuacan,Pueblo,,72670,Rural
+360,La Noria,Conjunto habitacional,Cuautlancingo,72700,Urbano
+361,Zopilotepec,Ranchería,,73566,Rural
+362,La Gloria,Colonia,Ciudad Serdán,75520,Urbano
+363,Xochihuixtla,Ranchería,,75095,Rural
+364,Los Ranchos (Rinconada),Ranchería,,73309,Rural
+365,5 de Mayo,Colonia,,73950,Urbano
+366,Cuabtlajapa,Ranchería,,75924,Rural
+367,Los Carrizos,Fraccionamiento,,74160,Urbano
+368,El Edén,Colonia,,73588,Rural
+369,San Antonio Soledad,Pueblo,,75590,Rural
+370,Manuel Ávila Camacho (La Cima),Colonia,,75129,Rural
+371,2da. Ampliación Guadalupe Hidalgo,Colonia,Heroica Puebla de Zaragoza,72490,Urbano
+371,Quetzalcoatl 2a. Sección,Colonia,Heroica Puebla de Zaragoza,72595,Urbano
+371,San Juan Flor del Bosque,Colonia,Heroica Puebla de Zaragoza,72360,Urbano
+371,San Miguel Hueyotlipan,Colonia,Heroica Puebla de Zaragoza,72050,Urbano
+372,El Jazmín,Ranchería,,75467,Rural
+373,Teapa,Colonia,,75082,Rural
+374,Las Rosas (Tepatlaxco),Colonia,,74120,Urbano
+375,Bosque San Diego,Fraccionamiento,San Pedro Cholula,72768,Urbano
+376,Santa Catarina de Siena,Colonia,,75855,Rural
+377,La Nueva Junta Arroyo Zarco,Colonia,,73502,Rural
+378,Xoyatla,Pueblo,,74394,Rural
+379,Guadalupe Sarabia,Pueblo,,73994,Rural
+380,La Moraleda,Fraccionamiento,Teziutlán,73820,Urbano
+381,Temaxcalapa,Ranchería,,73074,Rural
+382,Santa Cruz Moxolahuac,Pueblo,,74102,Rural
+383,La Cumbre,Ranchería,,73909,Rural
+384,Tochtepec Centro,Barrio,,75610,Rural
+385,Atzompa,Ranchería,,74796,Rural
+386,Zompanteco,Barrio,,73674,Rural
+387,La Cañada,Barrio,,73680,Rural
+388,La Mesa del Crucero (La Mesita),Finca,,73257,Rural
+389,Balcones de Amealco,Colonia,,76850,Urbano
+389,Santiago Mexquititlán Barrio 4o.,Barrio,,76890,Urbano
+390,La Joya de Ahuacatlán,Ranchería,,76315,Rural
+390,San José Cochinito,Ranchería,,76323,Rural
+391,La Cantera,Ranchería,,76421,Rural
+392,San Ildefonso,Pueblo,,76295,Urbano
+393,El Jagüey Grande,Pueblo,,76681,Urbano
+394,El Rincón,Ranchería,,76350,Rural
+395,El Humo,Ranchería,,76395,Rural
+396,Matanzas,Pueblo,,76252,Urbano
+396,Segundo Barrio de Dolores,Colonia,,76246,Urbano
+397,La Tinaja,Ranchería,,76478,Rural
+397,Vista Alegre,Ranchería,,76489,Rural
+398,Dos Valles,Fraccionamiento,Santiago de Querétaro,76116,Urbano
+398,Generación 2000,Colonia,Santiago de Querétaro,76147,Urbano
+398,La Condesa,Colonia,Santiago de Querétaro,76125,Urbano
+398,Parques,Fraccionamiento,Santiago de Querétaro,76158,Urbano
+398,Pintillo,Pueblo,,76223,Urbano
+398,Santa Rosa de Jauregui,Ejido,,76233,Urbano
+398,Villas Regency,Fraccionamiento,Santiago de Querétaro,76100,Urbano
+399,Residencial San Fernando,Fraccionamiento,San Juan del Rio,76807,Urbano
+400,La Estancia,Ranchería,,76634,Rural
+401,Del Sureste,Fraccionamiento,Isla Mujeres,77403,Urbano
+402,Leona Vicario,Colonia,Chetumal,77016,Urbano
+403,Jardines Cancún,Colonia,Cancún,77537,Urbano
+403,Supermanzana 241,Colonia,Cancún,77527,Urbano
+403,Supermanzana 42,Colonia,Cancún,77507,Urbano
+403,Supermanzana 45,Colonia,Cancún,77506,Urbano
+403,Supermanzana 531,Colonia,Cancún,77536,Urbano
+403,Supermanzana 78,Colonia,Cancún,77528,Urbano
+403,Tierra y Libertad,Colonia,Cancún,77516,Urbano
+404,Pocito,Colonia,,77800,Urbano
+405,Ejidal,Colonia,Playa del Carmen,77712,Urbano
+405,Real Amalfi,Fraccionamiento,Playa del Carmen,77714,Urbano
+405,Residencial Bambú,Fraccionamiento,Playa del Carmen,77716,Urbano
+406,El Naranjal,Ranchería,,77923,Rural
+407,El Aguaje de los Castillos,Ejido,,78983,Rural
+408,San Antonio de la Cruz,Ranchería,,78563,Rural
+409,Francia Grande,Rancho,,79353,Rural
+409,Ojo de Agua,Ejido,,79336,Rural
+409,San Rafael Carretera,Ranchería,,79356,Rural
+410,Bugambilias,Fraccionamiento,Ciudad Valles,79028,Urbano
+410,Campo del Capulín,Ejido,,79267,Rural
+410,Las Huastecas,Colonia,Ciudad Valles,79095,Urbano
+410,Las Palmas,Fraccionamiento,Ciudad Valles,79023,Urbano
+411,El Clérigo,Rancho,,78576,Rural
+412,Carbonera,Ejido,,78802,Rural
+412,Las Palmas,Fraccionamiento,Matehuala,78715,Urbano
+412,San Miguel,Ranchería,,78827,Rural
+413,Comunidad Corte Primero,Rancho,,78466,Rural
+414,Garita de Saltillo,Colonia,San Luis Potosí,78107,Urbano
+414,Hacienda de Santiago,Fraccionamiento,San Luis Potosí,78136,Urbano
+414,Muñoz,Colonia,San Luis Potosí,78165,Urbano
+414,Nuevo México,Colonia,,78414,Rural
+414,Santa Rosalía,Fraccionamiento,San Luis Potosí,78117,Urbano
+415,El Sabinito,Ranchería,,79793,Rural
+416,Privada Hacienda San Mateo,Fraccionamiento,Soledad de Graciano Sánchez,78438,Urbano
+416,Residencial Herradura,Fraccionamiento,Soledad de Graciano Sánchez,78434,Urbano
+417,Noria de Santa Teresa,Pueblo,,78934,Rural
+418,Crucero de Comoca,Barrio,,79937,Rural
+419,Los Hoyos,Rancho,,79554,Rural
+420,Rincón de Leijas,Rancho,,78958,Rural
+420,Santa Teresa,Rancho,,78950,Rural
+421,Bosque de las Flores,Ejido,Villa de Pozos,78421,Rural
+421,Rinconada la Viña,Fraccionamiento,Villa de Pozos,78421,Urbano
+422,Cinco de Mayo,Ejido,,81361,Rural
+422,Mallorca,Fraccionamiento,Los Mochis,81254,Urbano
+422,Portal de Hierro,Fraccionamiento,Los Mochis,81271,Urbano
+422,STASE Los Álamos,Fraccionamiento,Los Mochis,81285,Urbano
+423,Agustina Ramírez,Ejido,,81649,Rural
+424,El Aguaje del Charo,Rancho,,80635,Rural
+424,El Epazote,Rancho,,80670,Rural
+425,La Petaca,Ranchería,,82667,Rural
+426,Campo Nuevo México,Ejido,,80398,Rural
+426,La Amistad,Colonia,Culiacán Rosales,80249,Urbano
+426,Lomas de San Isidro,Fraccionamiento,Culiacán Rosales,80197,Urbano
+427,Los Mecates,Ranchería,,82734,Rural
+428,La Ciénega,Ranchería,,82554,Rural
+429,La Galera,Ranchería,,81854,Rural
+430,Las Higueras (Las Flores),Ranchería,,81177,Rural
+430,Privada Popular,Fraccionamiento,Guasave,81075,Urbano
+430,Sacramento (Campo la Once),Rancho,,81120,Rural
+430,San José,Colonia,Guasave,81028,Urbano
+431,El Bebedero,Rancho,,82313,Rural
+431,Esperanza,Colonia,Mazatlán,82180,Urbano
+431,Plazas San Ignacio,Zona comercial,Mazatlán,82157,Urbano
+432,La Cueva,Ejido,,80856,Rural
+433,Agua Zarca,Ranchería,,82853,Rural
+433,El Pozole,Pueblo,,82871,Rural
+433,El Tierral,Colonia,El Rosario,82805,Urbano
+434,El Cedro,Rancho,,82985,Rural
+435,La Mesa,Ranchería,,81977,Rural
+435,Mapiri,Ranchería,,81970,Rural
+436,El Batallón,Ejido,,80374,Rural
+436,La Villita,Fraccionamiento,Navolato,80324,Urbano
+437,La Cruz de Eldorado (Cruz de Navito),Ranchería,,80452,Rural
+438,Alberto Gracía Grijalva,Ejido,,84303,Rural
+438,El Campanario,Fraccionamiento,Agua Prieta,84214,Urbano
+438,El Fresnal,Ranchería,,84303,Rural
+438,Herlinda Celaya Ibarra,Ejido,,84303,Rural
+438,Vallarta,Colonia,Agua Prieta,84260,Urbano
+439,El Cajón,Pueblo,,85775,Rural
+439,El Campamento de la CNA,Ranchería,,85773,Rural
+439,El Mezquital,Colonia,,85767,Rural
+439,Los Mimbres (El Pinto),Ranchería,,85775,Rural
+439,San Agustín de la Palma,Ranchería,,85773,Rural
+439,San Miguel,Ranchería,,85775,Rural
+439,San Nicolás,Ranchería,,85773,Rural
+440,José Juan Cuellar (Cuauhtémoc),Ejido,,83795,Rural
+441,El Cazo,Ranchería,,84893,Rural
+442,El Perú,Ranchería,,83913,Rural
+443,Armando Reyna,Colonia,Heroica Caborca,83666,Urbano
+444,Campo Dulce,Ranchería,,85218,Rural
+444,Caseta de Riego,Ranchería,,85213,Rural
+444,Cuchos Nuevos,Ranchería,,85213,Rural
+444,Francisco Javier Valenzuela,Ranchería,,85216,Rural
+444,Guadalupe Meza (La Engorda),Ranchería,,85203,Rural
+444,Gómez Brambila,Ranchería,,85209,Rural
+444,Héctor Mercado,Ranchería,,85200,Rural
+444,La Huerta,Ranchería,,85218,Rural
+444,Las Cuevitas,Ranchería,,85217,Rural
+444,Los Chinitos (Ejido Nogales),Rancho,,85214,Rural
+444,Los Machochos,Ejido,,85209,Rural
+444,Los Olivos,Fraccionamiento,Ciudad Obregón,85024,Urbano
+444,Martha Valdez,Ranchería,,85200,Rural
+444,Ojai,Ranchería,,85206,Rural
+444,Productora Santa Anita,Ranchería,,85208,Rural
+444,San Francisco de la Huerta,Ranchería,,85218,Rural
+444,San Pedro,Ranchería,,85203,Rural
+444,Yucuribampo,Rancho,,85205,Rural
+445,La Colorada,Ranchería,,84636,Rural
+445,Las Gallinas,Ranchería,,84637,Rural
+445,Vicente Guerrero,Ejido,,84633,Rural
+446,El Alto Guayparín,Colonia,,85287,Urbano
+446,Lázaro Cárdenas (Mayojusálit),Ejido,,85283,Rural
+447,La Ciénega,Ranchería,,84326,Rural
+447,La Higuerita,Ranchería,,84328,Rural
+448,Atardeceres,Fraccionamiento,Heroica Guaymas,85423,Urbano
+449,20 Noviembre Cuatro,Ranchería,,83317,Rural
+449,Alcázar,Fraccionamiento,Hermosillo,83177,Urbano
+449,Asturias Residencial,Fraccionamiento,Hermosillo,83288,Urbano
+449,Juan Barrera Navarro,Ranchería,,83303,Rural
+449,La Cuichi (Pelícano),Rancho,,83315,Rural
+449,La Jolla Villa de los Zafiros,Fraccionamiento,Hermosillo,83159,Urbano
+449,Los Chinos,Ranchería,,83307,Rural
+449,Nueva Castilla,Colonia,Hermosillo,83126,Urbano
+449,San Luis Rey,Fraccionamiento,Hermosillo,83114,Urbano
+449,Santa Cruz,Ranchería,,83303,Rural
+450,Buiyarumo,Ranchería,,85245,Rural
+450,Rosas,Ranchería,,85243,Rural
+450,Serbel,Rancho,,85249,Rural
+451,El Aterrizaje,Colonia,Magdalena de Kino,84160,Urbano
+451,El Cuadro,Ranchería,,84175,Rural
+451,González,Ranchería,,84175,Rural
+452,Coplamar,Colonia,,84563,Urbano
+453,Las Milpitas,Colonia,,84340,Urbano
+454,Barebampo,Ranchería,,85235,Rural
+454,El Árbol Caído [Restaurante],Ranchería,,85229,Rural
+454,Héctor Arreola,Ranchería,,85226,Rural
+454,Nacapul,Ranchería,,85224,Rural
+455,La Bellota,Granja,,84116,Rural
+456,La Bolsa,Ranchería,,83513,Rural
+456,María Viuda de García,Rancho,,83517,Rural
+457,San Joaquín,Rancho,,86943,Rural
+457,Santa Isabel,Rancho,,86956,Rural
+458,Ingenio Presidente Benito Juárez,Colonia,,86485,Urbano
+459,Coronel Traconis (San Diego 5ta. Sección),Ranchería,,86265,Rural
+459,La Isla,Fraccionamiento,Villahermosa,86126,Urbano
+459,Real del Angel,Fraccionamiento,Villahermosa,86153,Urbano
+459,Villa de las Flores,Fraccionamiento,Villahermosa,86019,Urbano
+460,Sur Aldama,Ranchería,,86640,Rural
+460,Zapotal 3ra. Sección,Ranchería,,86652,Rural
+461,Huapacal 4ta. Sección,Ranchería,,86423,Rural
+461,La Candelaria,Ejido,,86446,Rural
+461,Pejelagartero 1ra. Sección (Los Pinos),Ranchería,,86415,Rural
+462,Calicanto (Rinconada),Ejido,,86860,Rural
+462,Lomas de Vidal,Ranchería,,86834,Rural
+463,El Zapotal,Colonia,,86725,Urbano
+464,San Isidro 2da. Sección,Ranchería,,86233,Rural
+465,Los Olivos,Fraccionamiento,Paraíso,86608,Urbano
+466,Caridad Guerrero,Ranchería,,86896,Rural
+466,Carlos A Madrazo,Ejido,,86880,Rural
+466,Nueva Esperanza,Ranchería,,86896,Rural
+467,Andrés Quintana Roo 1ra. Sección,Ejido,,86824,Rural
+467,Miguel Hidalgo 2da. Sección (San Joaquín),Ranchería,,86826,Rural
+467,Vicente Guerrero (San Lorenzo),Ranchería,,86807,Rural
+468,Jardines de Champayán,Colonia,Altamira,89607,Urbano
+468,Las Blancas,Colonia,Altamira,89602,Urbano
+468,Los Prados,Fraccionamiento,Altamira,89603,Urbano
+469,Guardados de Abajo,Ranchería,,88455,Rural
+469,Tamaulipas,Colonia,Ciudad Camargo,88444,Urbano
+470,Héroe de Nacozari,Colonia,Ciudad Madero,89520,Urbano
+470,Miramar,Fraccionamiento,Ciudad Madero,89506,Urbano
+471,El Arco,Ejido,,87247,Rural
+472,Del Golfo,Colonia,Heroica Matamoros,87343,Urbano
+472,Hacienda del Puente,Fraccionamiento,Heroica Matamoros,87344,Urbano
+472,Melchor Ocampo,Colonia,Heroica Matamoros,87399,Urbano
+473,El Bravo,Colonia,Reynosa,88580,Urbano
+473,Puerta del Sol,Fraccionamiento,Reynosa,88736,Urbano
+473,San José de los Garza,Ranchería,,88713,Rural
+474,Las Mitras,Colonia,Valle Hermoso,87503,Urbano
+475,La Corregidora,Colonia,Ciudad Victoria,87089,Urbano
+475,Los Álamos,Fraccionamiento,Ciudad Victoria,87084,Urbano
+475,SAHOP,Colonia,Ciudad Victoria,87180,Urbano
+475,Villas del Pedregal,Fraccionamiento,Ciudad Victoria,87019,Urbano
+476,Primero de Mayo,Colonia,Xicoténcatl,89758,Urbano
+477,San Marcos,Ranchería,,90415,Rural
+478,Texcacoac,Barrio,Chiautempan,90806,Urbano
+479,El Agua Santa (Las Tinas),Ranchería,,90297,Rural
+480,Tetlapa,Barrio,,90121,Urbano
+481,Los Volcanes,Colonia,Tlaxcala de Xicohténcatl,90014,Urbano
+481,Tepetlapa,Unidad habitacional,,90105,Urbano
+482,La Ciénega,Ranchería,,90274,Rural
+482,Santa Fe,Ranchería,,90277,Rural
+483,Las Palomas,Unidad habitacional,,90740,Urbano
+484,Atlixtaca,Ranchería,,90546,Rural
+485,5ta. Sección San José Teacalco,Colonia,,90496,Urbano
+486,Chichihua,Colonia,Acayucan,96028,Urbano
+487,Actopan Centro,Colonia,,91480,Urbano
+488,Ignacio Zaragoza Primera Sección,Colonia,,93734,Rural
+489,Mata Larga (San Sebastian Mata Larga),Ranchería,,94967,Rural
+490,Las Vegas II,Colonia,Boca del Río,94297,Urbano
+490,Virginia,Fraccionamiento,Boca del Río,94294,Urbano
+491,Liberación,Colonia,,94745,Rural
+492,Mata Gallina,Pueblo,,94983,Rural
+493,17 de Mayo,Colonia,Cerro Azul,92513,Urbano
+494,El Manantial,Colonia,Coatzacoalcos,96535,Urbano
+495,Paso Carretas,Colonia,,94210,Rural
+495,Paso Pimienta,Colonia,,94210,Rural
+496,Cosaltepec,Colonia,,94553,Rural
+496,El Maizal,Colonia,Córdoba,94542,Urbano
+497,Piedra Herrada,Colonia,,94995,Rural
+498,El Ixtle Flores Magón,Ranchería,,92727,Rural
+499,El Nacimiento,Ejido,,96993,Rural
+500,Xochitlán (Parajes),Ranchería,,92204,Rural
+501,Melchor Ocampo,Pueblo,,93193,Rural
+502,Arroyo Grande,Pueblo,,93550,Rural
+502,De San Pancho,Barrio,Gutiérrez Zamora,93557,Urbano
+502,Los Ángeles,Colonia,Gutiérrez Zamora,93559,Urbano
+503,Benito Juárez,Ranchería,,96940,Rural
+504,Coxolo,Colonia,,94117,Rural
+504,San Diego Tetitlán,Colonia,,94117,Rural
+505,Ixhuatlan de Madero,Pueblo,,92680,Rural
+506,Barranca San Miguel,Colonia,,94455,Rural
+507,El Tucán,Colonia,Xalapa-Enríquez,91056,Urbano
+507,Las Margaritas,Colonia,Xalapa-Enríquez,91095,Urbano
+508,El Mango (Sabas Lemarroy),Ranchería,,96300,Rural
+508,La Gloria,Ranchería,,96313,Rural
+509,Nuevo Remolino (El Cincuenta),Ejido,,95673,Rural
+510,21 de Octubre,Colonia,,94420,Rural
+511,Mecatlan,Pueblo,,93080,Rural
+512,Potrerillo,Ranchería,,94276,Rural
+513,Buenavista de Juárez,Ranchería,,96927,Rural
+513,El Jagüey,Colonia,Minatitlán,96770,Urbano
+513,Obrera,Colonia,Minatitlán,96740,Urbano
+514,Allende,Ranchería,,93843,Rural
+515,Arboledas,Fraccionamiento,,94723,Urbano
+516,Tenejapa,Pueblo,,96160,Rural
+517,Emiliano Zapata,Colonia,,94905,Rural
+518,Vía Toscana Residencial,Fraccionamiento,Orizaba,94393,Urbano
+519,Predio Viveros,Colonia,,96330,Urbano
+520,Santa Rosa (Los Chotes),Colonia,,92090,Rural
+521,Las Higueras,Ranchería,,94973,Rural
+522,El Faisán,Colonia,,91672,Rural
+523,Benito Juárez,Colonia,,92033,Urbano
+524,20 de Noviembre,Colonia,San Andrés Tuxtla,95775,Semiurbano
+524,José María Morelos y Pavón,Colonia,,95800,Rural
+525,El Espinalito (Puente el Espinal),Ranchería,,95839,Rural
+525,Medellin de las Mercedes,Ranchería,,95836,Rural
+526,Lázaro Cárdenas (Adolfo Ruiz Cortines),Colonia,,96157,Rural
+527,Las Palmas,Rancho,,92564,Rural
+528,Santa Clara,Ranchería,,92113,Rural
+529,Santiago Mextla,Ranchería,,93766,Rural
+530,La Unión,Colonia,Álamo,92730,Urbano
+531,Las Lomas,Colonia,,96180,Rural
+532,Loma de los Pichones,Colonia,,95200,Rural
+533,La Reforma,Pueblo,,92922,Rural
+534,San Mateo,Colonia,,95463,Urbano
+535,El Palmar,Ranchería,,95224,Rural
+536,Cruz Blanca,Colonia,,91363,Rural
+537,1ro. de Mayo,Colonia,,92770,Urbano
+538,Unidad Antorchista,Colonia,,91697,Urbano
+539,Arroyo Zarco,Colonia,,94220,Rural
+539,El Pochote,Ranchería,,94220,Rural
+540,Mochichino,Ranchería,,95006,Rural
+541,Ozultetla,Ranchería,,92633,Rural
+542,Xno-Huayab,Ranchería,,97956,Rural
+543,X-Cacal,Rancho,,97804,Rural
+544,El Cedral,Fraccionamiento,Mérida,97208,Urbano
+544,Porto Belo,Fraccionamiento,,97305,Urbano
+544,San Antonio,Fraccionamiento,Mérida,97113,Urbano
+544,San Antonio Hool,Colonia,,97302,Rural
+545,Muna de Leopoldo Arana Cabrera,Pueblo,,97840,Rural
+546,Itzincab,Pueblo,,97822,Rural
+547,Yokdzonot Presentado,Pueblo,,97744,Rural
+548,San Lucas Tepetitlán,Pueblo,,99786,Rural
+549,Ramón López Velarde,Pueblo,,98510,Urbano
+550,Benito Juárez,Colonia,Fresnillo,99020,Urbano
+550,Las Mercedes,Ranchería,,99158,Rural
+550,Real de Fresnillo,Fraccionamiento,Fresnillo,99056,Urbano
+551,Santa Elena,Ranchería,,98760,Rural
+552,Las Américas,Fraccionamiento,Guadalupe,98612,Urbano
+552,S.T.U.A.Z.,Fraccionamiento,Guadalupe,98609,Urbano
+552,San Cosme,Fraccionamiento,Guadalupe,98612,Urbano
+553,Remudadero de Abajo (Remudadero),Ranchería,,99673,Rural
+554,Benito Juárez,Colonia,,99454,Rural
+554,Jardín del Álamo,Fraccionamiento,Jerez de García Salinas,99382,Urbano
+554,Zaragoza,Colonia,Jerez de García Salinas,99320,Urbano
+555,Hidalgo,Ejido,,98816,Rural
+556,Campo Diez (La Honda),Ranchería,,98336,Rural
+557,La Joya,Ranchería,,98925,Rural
+557,Los Arquitos,Barrio,,98920,Urbano
+558,Los Duraznos,Fraccionamiento,Río Grande,98422,Urbano
+559,El Chiquihuite,Ranchería,,99484,Rural
+560,Gustavo Díaz Ordaz 2da. Sección,Colonia,Zacatecas,98020,Urbano
+560,La Pinta,Colonia,Zacatecas,98024,Urbano
+560,Miguel Hidalgo (San Miguel),Ranchería,,98186,Rural
