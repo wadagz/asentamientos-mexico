@@ -8,21 +8,21 @@ use Wadagz\AsentamientosMexico\Services\FetchDataService;
 use Wadagz\AsentamientosMexico\Services\GenerateEnumsService;
 use Wadagz\AsentamientosMexico\Services\PreProcessDataService;
 
-class AsentamientosTablesCommand extends Command
+class AsentamientosFetchData extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'db:asentamientos-tables';
+    protected $signature = 'asent-mex:fetch-data';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Genera las tablas de Asentamientos, Municipios y Estados.';
+    protected $description = 'Descarga y prepara los datos de asentamientos.';
 
     /**
      * Execute the console command.
