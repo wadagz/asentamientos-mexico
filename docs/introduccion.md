@@ -19,8 +19,11 @@ Aquí se encuentra los pasos de instalación y una guía básica de uso del paqu
 
 ### Prerequisitos
 
-El paquete utiliza internamente un script en Python con Pandas para procesar los datos antes de importarlos, por lo que resulta
-necesario que estos se encuentren instalados de antemano.
+El código de PHP hace uso de funcionalidades disponibles a partir de la versión 8 en adelante, por lo que es necesario
+usar PHP 8+.
+
+El paquete utiliza internamente un script en Python con Pandas para procesar los datos antes de importarlos, de forma que resulta
+menester que estos se encuentren instalados de antemano.
 
 El script se ha probado con las versiones:
 - Python: 3.11.2
@@ -49,23 +52,30 @@ Posteriormente ejecuta `composer install` o `composer update`.
 
 ## Uso
 
-### Importación de datos
+### Descarga e importación de datos
 
 {: .info}
-> Previo a hacer uso de los comandos incluidos ejecuta las migraciones `php artisan db:migrate` para que
+> Previo a hacer uso de los comandos incluidos ejecuta las migraciones con `php artisan db:migrate` para que
 > las tablas necesarias sean creadas.
 
-El paquete incluye un comando para realizar la descarga e importación de los datos:
+El paquete incluye dos comandos, uno para realizar la descarga y otro para importar los datos.
 
+#### Descarga
+Realiza la descarga de los datos de Correos de México, lleva a cabo un pre-procesamiento de los mismos y
+genera archivos CSV para la posterior importación de los datos.
 ```bash
-db:asentamientos-tables-command
+asent-mex:fetch-data
 ```
 
-Esto descargará el archivo con los datos de la base de datos pública de Correos de México, realizará un preprocesado
-de con Python, y procederá a importarlos mediante la librería [Laravel Excel](https://docs.laravel-excel.com/3.1/getting-started/).
+#### Importación
+Ya teniendo los archivos CSV generados, mediante [Laravel Excel](https://docs.laravel-excel.com/3.1/getting-started/)
+importa los datos a las tablas de estados, municipios y asentamientos.
+```bash
+asent-mex:import-data
+```
 
 {: .note }
-> Con los parámetros por defecto la importación puede demorar alrededor de 4 minutos.
+> Con los parámetros por defecto la importación puede demorar alrededor de 4 a 5 minutos.
 
 ### Modelos, Factories y Enums
 
