@@ -4,6 +4,7 @@ namespace Wadagz\AsentamientosMexico\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Wadagz\AsentamientosMexico\Console\Commands\AsentamientosFetchData;
+use Wadagz\AsentamientosMexico\Console\Commands\AsentamientosImportData;
 
 final class AsentamientosMexicoProvider extends ServiceProvider
 {
@@ -30,6 +31,7 @@ final class AsentamientosMexicoProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->commands([
                 AsentamientosFetchData::class,
+                AsentamientosImportData::class
             ]);
         }
     }
