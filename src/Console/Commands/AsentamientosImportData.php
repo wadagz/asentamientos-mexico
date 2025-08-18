@@ -51,6 +51,7 @@ class AsentamientosImportData extends Command
         }
 
         $this->info('Importando estados.');
+        /** @var float $estadosImportDuration */
         $estadosImportDuration = Benchmark::measure(function () use($estadosCSV) {
             Excel::import(new EstadosImport, $estadosCSV);
         });
@@ -58,6 +59,7 @@ class AsentamientosImportData extends Command
         $this->info("Importación de estados demoró: $estadosImportDuration segundos.");
 
         $this->info('Importando municipios.');
+        /** @var float $municipiosImportDuration */
         $municipiosImportDuration = Benchmark::measure(function () use($municipiosCSV) {
             Excel::import(new MunicipiosImport, $municipiosCSV);
         });
@@ -65,12 +67,13 @@ class AsentamientosImportData extends Command
         $this->info("Importación de municipios demoró: $municipiosImportDuration segundos.");
 
         $this->output->title('Importando asentamientos');
-        $asestamientosDuration = Benchmark::measure(function () use($asentamientosCSV) {
+        /** @var float $asestamientosImportDuration */
+        $asestamientosImportDuration = Benchmark::measure(function () use($asentamientosCSV) {
             (new AsentamientosImport)->withOutput($this->output)->import($asentamientosCSV);
         });
-        $asestamientosDuration /= 1000;
+        $asestamientosImportDuration /= 1000;
 
-        $this->info("La importación de asentamientos demoró: $asestamientosDuration segundos.");
+        $this->info("La importación de asentamientos demoró: $asestamientosImportDuration segundos.");
 
         return Command::SUCCESS;
     }
