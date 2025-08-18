@@ -2,7 +2,7 @@
 layout: default
 title: Tablas / Migraciones
 parent: Explicación a detalle
-nav_order: 1
+nav_order: 3
 ---
 # Tablas / Migraciones incluidas
 

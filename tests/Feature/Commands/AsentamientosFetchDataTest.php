@@ -1,9 +1,9 @@
 <?php
 
-use Wadagz\AsentamientosMexico\Console\Commands\AsentamientosTablesCommand;
+use Wadagz\AsentamientosMexico\Console\Commands\AsentamientosFetchData;
 
-it('can run the command successfully', function () {
-    $this->artisan(AsentamientosTablesCommand::class)
+it('can run asentamientos fetch data command', function () {
+    $this->artisan(AsentamientosFetchData::class)
         ->assertSuccessful();
 
     expect(storage_path('app/private/CPdescarga.txt'))->toBeFile();

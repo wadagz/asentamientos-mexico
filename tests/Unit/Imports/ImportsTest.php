@@ -41,4 +41,3 @@ it('can import Asentamientos', function () {
 
     expect(Asentamiento::exists())->toBeTrue();
 });
-
