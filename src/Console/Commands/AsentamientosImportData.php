@@ -3,6 +3,8 @@
 namespace Wadagz\AsentamientosMexico\Console\Commands;
 
 use Illuminate\Console\Command;
+use Illuminate\Support\Benchmark;
+use Illuminate\Support\Facades\Schema;
 use Maatwebsite\Excel\Facades\Excel;
 use Wadagz\AsentamientosMexico\Imports\AsentamientosImport;
 use Wadagz\AsentamientosMexico\Imports\EstadosImport;
@@ -31,13 +33,44 @@ class AsentamientosImportData extends Command
      */
     public function handle(): int
     {
+        /** @var string $estadosCSV */
         $estadosCSV = $this->option('estados') ?? storage_path('temp/estados.csv');
+        /** @var string $municipiosCSV */
         $municipiosCSV = $this->option('municipios') ?? storage_path('temp/municipios.csv');
+        /** @var string $asentamientosCSV */
         $asentamientosCSV = $this->option('asentamientos') ?? storage_path('temp/asentamientos.csv');
 
-        Excel::import(new EstadosImport, $estadosCSV);
-        Excel::import(new MunicipiosImport, $municipiosCSV);
-        Excel::import(new AsentamientosImport, $asentamientosCSV);
+        if (!Schema::hasTable('estados')) {
+            $this->fail('La tabla estados no existe.');
+        }
+        if (!Schema::hasTable('municipios')) {
+            $this->fail('La tabla municipios no existe.');
+        }
+        if (!Schema::hasTable('asentamientos')) {
+            $this->fail('La tabla asentamientos no existe.');
+        }
+
+        $this->info('Importando estados.');
+        $estadosImportDuration = Benchmark::measure(function () use($estadosCSV) {
+            Excel::import(new EstadosImport, $estadosCSV);
+        });
+        $estadosImportDuration /= 1000;
+        $this->info("Importación de estados demoró: $estadosImportDuration segundos.");
+
+        $this->info('Importando municipios.');
+        $municipiosImportDuration = Benchmark::measure(function () use($municipiosCSV) {
+            Excel::import(new MunicipiosImport, $municipiosCSV);
+        });
+        $municipiosImportDuration /= 1000;
+        $this->info("Importación de municipios demoró: $municipiosImportDuration segundos.");
+
+        $this->output->title('Importando asentamientos');
+        $asestamientosDuration = Benchmark::measure(function () use($asentamientosCSV) {
+            (new AsentamientosImport)->withOutput($this->output)->import($asentamientosCSV);
+        });
+        $asestamientosDuration /= 1000;
+
+        $this->info("La importación de asentamientos demoró: $asestamientosDuration segundos.");
 
         return Command::SUCCESS;
     }
