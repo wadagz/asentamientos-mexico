@@ -42,13 +42,34 @@ el repositorio en el archivo `composer.json`.
     "repositories": [
         {
             "type": "vcs",
-            "url":  "https://github.com/wadagz/asentamientos-mexico"
+            "url":  "git@github.com:dev-cucei-itrans/localidades-mexico.git"
         }
-    ]
+    ],
+    "minimum-stability": "dev",
 }
 ```
 
-Posteriormente ejecuta `composer install` o `composer update`.
+Debido a que el paquete se encuentra en un repositorio privado en GitHub puede resultar necesario hacer
+uso un de token para obtener acceso al repositorio. Para ello sigue estos pasos:
+
+1. Para generar el token se requiere acceder a la página de settings de tu perfil en [GitHub](https://github.com/settings/profile).
+2. Selecciona la opción `Developer Settings` que se encuentra en el menú lateral izquierdo hasta abajo.
+3. Selecciona `Personal access tokens` > `Tokens (classic)`.
+4. Asigna un nombre y fecha de expiración al token.
+5. En la sección `Select scopes` selecciona  la opción `repo` (la primera que se muestra).
+6. Da clic en `Generate token`.
+7. Se mostrará en pantalla el token generado. Cópialo y guárdalo en un lugar seguro.
+
+Ahora instala el paquete.
+
+```bash
+composer require wadagz/asentamientos-mexico
+```
+
+Posiblemente se te muestre el mensaje: _The authenticity of host 'github.com (140.82.116.3)' can't be established..._ Escribe `yes` y presiona Enter.
+
+Cuando composer solicite un token de acceso, copia y pega el token generado anteriormente.
+
 
 ## Uso
 
